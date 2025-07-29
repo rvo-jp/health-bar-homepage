@@ -1,0 +1,94 @@
+@import url(/common/style.css);
+
+body {
+    background-color: #222222;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#logo h2 {
+    font-weight: normal;
+}
+#nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+#top {
+    background-image: url(./img/001.jpeg);
+    background-size: cover;
+    height: 750px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+#top_text {
+    margin-left: 50%;
+}
+#name {
+    font-size: 64px;
+    font-weight: normal;
+    margin: 0;
+}
+#sub {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#dl {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#download {
+    background-color: #5a96e4;
+    padding: 0px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+#download p {
+    font-weight: normal;
+}
+
+
+#menu {
+    background-color: #000;
+}
+#menu>#mn {
+    margin: auto;
+    height: 100px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#preview {
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
