@@ -26,7 +26,7 @@
             <h1 id="name">Health Bar</h1>
             <h2 id="sub">A simple health indicator</h2>
             <div id="dl">
-                <div id="download"><p>Download</p><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></div>
+                <div id="download"><p>DOWNLOAD</p><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></div>
                 <p>477,273 dowloads</p>
             </div>
         </div>
@@ -44,9 +44,43 @@
     <div id="preview">
         <h1>Preview</h1>
         <hr>
-        <iframe  src="https://www.youtube.com/embed/0qYaEBuM-7E?si=IDqwGRkvqHP3hDrR&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/0qYaEBuM-7E?si=IDqwGRkvqHP3hDrR&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
+    <div id="changelog">        
+        <div id="latest">
+            <p>UPDATE & BUGFIX</p>
+            <h2>Version 3.4.0 - July 27 2025</h2>
+            <li>Added support for the new mob "Happy Ghast" introduced in v1.21.90</li>
+            <li>Fixed a bug where Creepers were always charged with lightning</li>
+            <li>Fixed a bug causing Ghasts to appear excessively larg</li>
+        </div>
+    </div>
 
+    <div id="features">
+        <div>
+            <div id="a1" class="pic"></div>
+            <div>
+                <h1>Health Indicator</h1>
+                <p>This resource pack adds health indicators above all vanilla mobs in the form of a bar and numbers. The numbers precisely show the mob's current health, while the bar provides a visual representation of how much health remains</p>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div>
+                <h1>Coloer change</h1>
+                <p>The color of the health bar changes depending on the mob's health: green for 51-100%, yellow for 21-50%, and red for 1-20%.</p>
+            </div>
+            <div id="a2" class="pic"></div>
+        </div>
+        <hr>
+        <div>
+            <div id="a3" class="pic"></div>
+            <div>
+                <h1>Glows in dark</h1>
+                <p>Both the health bar and numbers glow in the dark, ensuring they are always visible in any environment.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

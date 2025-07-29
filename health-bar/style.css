@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     left: 50%;
     transform: translateX(-50%);
@@ -75,6 +75,7 @@ header {
 #menu>#mn {
     margin: auto;
     height: 100px;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -84,11 +85,62 @@ header {
 
 #preview {
     padding: 10px;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
+}
+
+#changelog {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+}
+#latest {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: black;
+}
+#latest h2 {
+    font-weight: normal;
+}
+#latest li {
+    color: lightgray;
+}
+
+
+
+
+#features {
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+#features>div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#features hr {
+    margin: 30px;
+}
+#features .pic {
+    aspect-ratio: 16 / 9;
+    width: 65%;
+    flex-shrink: 0;
+    background-size: 100%;
+    border-radius: 4px;
+}
+#a1 {
+    background-image: url(./img/a1.jpeg);
+}
+#a2 {
+    background-image: url(./img/a2.jpeg);
+}
+#a3 {
+    background-image: url(./img/a3.jpeg);
 }
