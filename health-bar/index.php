@@ -68,10 +68,10 @@
 
     <div id="menu">
         <div id="mn">
-            <p>Preview</p>
-            <p>Changelog</p>
-            <p>Features</p>
-            <p>FAQ & Feedback</p>
+            <a href="./#preview"><p>Preview</p></a>
+            <a href="./#changelog"><p>Release note</p></a>
+            <a href="./#features"><p>Features</p></a>
+            <a href="./#faq"><p>FAQ & Feedback</p></a>
         </div>
     </div>
 
@@ -81,15 +81,17 @@
         <iframe src="https://www.youtube.com/embed/0qYaEBuM-7E?si=IDqwGRkvqHP3hDrR&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-    <div id="changelog">   
+    <div id="changelog">
+        <div id="news">
+            <h1>Release note</h1>
+            <h3>Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!</h3>
+        </div>
         <div id="latest">
             <div id="newimg"></div>
             <div id="newdes">
                 <p id="type">UPDATE & BUGFIX</p>
                 <h2>Version 3.4.0 - July 27 2025</h2>
-                <li>Added support for the new mob "Happy Ghast" introduced in v1.21.90</li>
-                <li>Fixed a bug where Creepers were always charged with lightning</li>
-                <li>Fixed a bug causing Ghasts to appear excessively large</li>
+                <p>This update adds support for the newly introduced mob, the “Happy Ghast,” from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.</p>
             </div>
         </div>
     </div>
