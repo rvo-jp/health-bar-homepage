@@ -9,35 +9,38 @@
 <body>
     <header>
         <div id="inner">
-            <div id="logo">
-                <svg  width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path
-            d="
-            m1 4
-            h25
-            l4 5
-            v1
-            l-4 5
-            h-11
-            v12
-            h-10
-            v-17
-            h17
-            v-1
-            h-17
-            l-4 -5
-
-            M 16 16
-            h10
-            l4 5
-            v1
-            l-4 5
-            h-10
-            v-11
-            "
-            fill="#fff"
-                /></svg>
+            <a href="/"><div id="logo">
+                <svg width="35px" height="35px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="
+        m1 4
+        h22
+        l3 4
+        v1
+        l-3 4
+        h-3
+        v1
+        h3
+        l3 4
+        v1
+        l-6 8
+        l-3 -4
+        h-2
+        v-10
+        h-1
+        v10
+        h-10
+        v-14
+        h16
+        v-1
+        h-16
+        l-3 -4
+        "
+        fill="#fff"
+    />
+</svg>
                 <h2>Rvo Works</h2>
-            </div>
+            </div></a> 
 
             <div id="nav">
                 <p>Contact</p>
@@ -53,8 +56,12 @@
             <h1 id="name">Health Bar</h1>
             <h2 id="sub">A simple health indicator</h2>
             <div id="dl">
-                <div id="download"><p>DOWNLOAD</p><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg></div>
-                <p>477,273 dowloads</p>
+                <a href="./download/download.php" download>
+                    <div id="download">
+                        <p>DOWNLOAD</p><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                    </div>
+                </a>
+                <p><?php echo number_format((int)file_get_contents('download/count.txt')); ?> dowloads</p>
             </div>
         </div>
     </div>
