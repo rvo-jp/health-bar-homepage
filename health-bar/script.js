@@ -32,3 +32,32 @@ window.addEventListener('scroll', () => {
 
     lastScrollY = currentScrollY;
 });
+
+document.getElementById('send').addEventListener('click', () => {
+    const feedback = document.getElementById('feedback').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const error = document.getElementById('error')
+
+    if (feedback) {
+        fetch('./feedback/feedback.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                feedback: feedback,
+                email: email
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status == "error") error.textContent = data.message
+            else {
+                document.getElementById('feedbackform').style.display = 'none';
+                document.getElementById('thankyou').style.display = 'block';
+            }
+        })
+        .catch(error => error.textContent = "There was an error sending your feedback.");
+    }
+    else error.textContent = "Please input your feedback."
+})

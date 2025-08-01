@@ -9,39 +9,7 @@
 <body>
     <header>
         <div id="inner">
-            <a href="/"><div id="logo">
-                <svg width="35px" height="35px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="
-        m1 4
-        h22
-        l3 4
-        v1
-        l-3 4
-        h-3
-        v1
-        h3
-        l3 4
-        v1
-        l-6 8
-        l-3 -4
-        h-2
-        v-10
-        h-1
-        v10
-        h-10
-        v-14
-        h16
-        v-1
-        h-16
-        l-3 -4
-        "
-        fill="#fff"
-    />
-</svg>
-                <h2>Rvo Works</h2>
-            </div></a> 
-
+            <a href="/"><h2 id="logo"><svg width="35px" height="35px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d=" m1 4 h22 l3 4 v1 l-3 4 h-3 v1 h3 l3 4 v1 l-6 8 l-3 -4 h-2 v-10 h-1 v10 h-10 v-14 h16 v-1 h-16 l-3 -4"fill="#fff"/></svg> Rvo Works</h2></a> 
             <div id="nav">
                 <p>Contact</p>
                 <p>Addons</p>
@@ -56,11 +24,7 @@
             <h1 id="name">Health Bar</h1>
             <h2 id="sub">A simple health indicator</h2>
             <div id="dl">
-                <a href="./download/download.php" download>
-                    <div id="download">
-                        <p>DOWNLOAD</p><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-                    </div>
-                </a>
+                <a href="./download/download.php" download><p id="download">DOWNLOAD <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg></p></a>
                 <p><?php echo number_format((int)file_get_contents('download/count.txt')); ?> dowloads</p>
             </div>
         </div>
@@ -69,7 +33,7 @@
     <div id="menu">
         <div id="mn">
             <a href="./#preview"><p>Preview</p></a>
-            <a href="./#changelog"><p>Release note</p></a>
+            <a href="./#changelog"><p>News</p></a>
             <a href="./#features"><p>Features</p></a>
             <a href="./#faq"><p>FAQ & Feedback</p></a>
         </div>
@@ -83,17 +47,19 @@
 
     <div id="changelog">
         <div id="news">
-            <h1>Release note</h1>
+            <h1>News</h1>
             <h3>Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!</h3>
         </div>
         <div id="latest">
             <div id="newimg"></div>
             <div id="newdes">
-                <p id="type">UPDATE & BUGFIX</p>
-                <h2>Version 3.4.0 - July 27 2025</h2>
-                <p>This update adds support for the newly introduced mob, the “Happy Ghast,” from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.</p>
+                <p class="type">UPDATE & BUGFIX</p>
+                <h2>Version 3.4.0 — July 27 2025</h2>
+                <p>This update adds support for the newly introduced mob, the "Happy Ghast," from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.</p>
+                <a href="http://github.com/rvo-jp/health-bar/"><p class="more">Learn more on GitHub<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11254)"> <path d="M10 17L15 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 12L10 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11254"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></p></a>
             </div>
         </div>
+
     </div>
 
     <div id="features">
@@ -132,6 +98,24 @@
                 <p>Can I use this with animation packs like "Actions & Stuff"?</p>
             </div>
         </div>
+
+        <div id="form">
+            <h1>Feedback</h1>
+            <div id="feedbackform">
+                <h4>Feel free to share your feedback, comments, or bug reports — your input helps improve the mcpack!</h4>
+                <textarea id="feedback" rows="5" placeholder="Enter here"></textarea>
+                <h4>If you'd like a reply, please provide your email address below:</h4>
+                <input type="email" id="email" placeholder="Your email address (optional)">
+                <p id="send">Send <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.3009 13.6949L20.102 3.89742M10.5795 14.1355L12.8019 18.5804C13.339 19.6545 13.6075 20.1916 13.9458 20.3356C14.2394 20.4606 14.575 20.4379 14.8492 20.2747C15.1651 20.0866 15.3591 19.5183 15.7472 18.3818L19.9463 6.08434C20.2845 5.09409 20.4535 4.59896 20.3378 4.27142C20.2371 3.98648 20.013 3.76234 19.7281 3.66167C19.4005 3.54595 18.9054 3.71502 17.9151 4.05315L5.61763 8.2523C4.48114 8.64037 3.91289 8.83441 3.72478 9.15032C3.56153 9.42447 3.53891 9.76007 3.66389 10.0536C3.80791 10.3919 4.34498 10.6605 5.41912 11.1975L9.86397 13.42C10.041 13.5085 10.1295 13.5527 10.2061 13.6118C10.2742 13.6643 10.3352 13.7253 10.3876 13.7933C10.4468 13.87 10.491 13.9585 10.5795 14.1355Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></p>
+                <p id="error"></p>
+            </div>
+
+            <div id="thankyou">
+                <h2>Thank you for your feedback!</h2>
+                <p>I truly appreciate your input and will use it to make improvements.</p>
+            </div>
+        </div>
+
     </div>
 
     <script src="./script.js"></script>
