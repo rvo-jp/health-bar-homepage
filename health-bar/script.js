@@ -1,15 +1,16 @@
-let bgIndex = 2;
+let bgIndex = 1;
 const topElement = document.getElementById('top');
+function changebg() {
+    topElement.style.backgroundImage = `url(./img/bg/${bgIndex}.jpeg)`;
+    if (bgIndex == 7) bgIndex = 1
+    else bgIndex ++;
+}
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 7; i++) {
     new Image().src =  `url(./img/bg/${i}.jpeg)`;
 }
 
-setInterval(() => {
-    topElement.style.backgroundImage = `url(./img/bg/${bgIndex}.jpeg)`;
-    if (bgIndex == 6) bgIndex = 1
-    else bgIndex ++;
-}, 5000)
+setInterval(changebg, 5000)
 
 let lastScrollY = window.scrollY;
 const header = document.querySelector('header');
