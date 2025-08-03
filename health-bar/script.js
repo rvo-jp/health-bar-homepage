@@ -23,10 +23,8 @@ window.addEventListener('scroll', () => {
         }
         else header.classList.add('header-colored');
 
-        // 上にスクロール → 表示
         header.classList.remove('header-hidden');
     } else {
-        // 下にスクロール → 非表示
         header.classList.add('header-hidden');
     }
 
@@ -61,3 +59,7 @@ document.getElementById('send').addEventListener('click', () => {
     }
     else error.textContent = "Please input your feedback."
 })
+
+document.querySelectorAll('.q').forEach(el => el.addEventListener('click', () => {
+    el.querySelector('.a').classList.toggle('hidden')
+}))

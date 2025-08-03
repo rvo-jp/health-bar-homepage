@@ -67,14 +67,14 @@
             <div id="a1" class="pic"></div>
             <div>
                 <h1>Bar & Counter</h1>
-                <p>This resource pack adds health indicators above all vanilla mobs in the form of a bar and numbers. The numbers precisely show the mob's current health, while the bar provides a visual representation of how much health remains</p>
+                <p>Shows a health bar and exact health value above all vanilla mobs, making it easy to track their remaining HP.</p>
             </div>
         </div>
         <hr>
         <div>
             <div>
-                <h1>Color change</h1>
-                <p>The color of the health bar changes depending on the mob's health: green for 51-100%, yellow for 21-50%, and red for 1-20%.</p>
+                <h1>Color-coded Levels</h1>
+                <p>The health bar changes color based on the remaining health: green (51-100%), yellow (21-50%), and red (1-20%)—making it easy to assess a mob’s condition at a glance.</p>
             </div>
             <div id="a2" class="pic"></div>
         </div>
@@ -82,8 +82,8 @@
         <div>
             <div id="a3" class="pic"></div>
             <div>
-                <h1>Glows in dark</h1>
-                <p>Both the health bar and numbers glow in the dark, ensuring they are always visible in any environment.</p>
+                <h1>Always Visible</h1>
+                <p>Both the bar and numbers glow in the dark, ensuring clear visibility in any lighting condition.</p>
             </div>
         </div>
     </div>
@@ -91,20 +91,22 @@
     <div id="faq">
         <h1>FAQ</h1>
         <div id="qlist">
-            <div>
+            <div class="q">
                 <p>Does this support mobs from other addons?</p>
+                <p class="a hidden">Currently, it only supports vanilla mobs. There are no plans to support mobs from other addons in future updates.</p>
             </div>
-            <div>
+            <div class="q">
                 <p>Can I use this with animation packs like "Actions & Stuff"?</p>
+                <p class="a hidden">No, it is not compatible. I also do not plan to add compatibility with specific addons in the future.</p>
             </div>
         </div>
 
         <div id="form">
             <h1>Feedback</h1>
             <div id="feedbackform">
-                <h4>Feel free to share your feedback, comments, or bug reports — your input helps improve the mcpack!</h4>
+                <p>Feel free to share your feedback, comments, or bug reports — your input helps improve the mcpack!</p>
                 <textarea id="feedback" rows="5" placeholder="Enter here"></textarea>
-                <h4>If you'd like a reply, please provide your email address below:</h4>
+                <p>If you'd like a reply, please provide your email address below:</p>
                 <input type="email" id="email" placeholder="Your email address (optional)">
                 <p id="send">Send <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.3009 13.6949L20.102 3.89742M10.5795 14.1355L12.8019 18.5804C13.339 19.6545 13.6075 20.1916 13.9458 20.3356C14.2394 20.4606 14.575 20.4379 14.8492 20.2747C15.1651 20.0866 15.3591 19.5183 15.7472 18.3818L19.9463 6.08434C20.2845 5.09409 20.4535 4.59896 20.3378 4.27142C20.2371 3.98648 20.013 3.76234 19.7281 3.66167C19.4005 3.54595 18.9054 3.71502 17.9151 4.05315L5.61763 8.2523C4.48114 8.64037 3.91289 8.83441 3.72478 9.15032C3.56153 9.42447 3.53891 9.76007 3.66389 10.0536C3.80791 10.3919 4.34498 10.6605 5.41912 11.1975L9.86397 13.42C10.041 13.5085 10.1295 13.5527 10.2061 13.6118C10.2742 13.6643 10.3352 13.7253 10.3876 13.7933C10.4468 13.87 10.491 13.9585 10.5795 14.1355Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></p>
                 <p id="error"></p>
@@ -117,6 +119,10 @@
         </div>
 
     </div>
+
+    <footer>
+        <p>Copyright (c) 2024-2025 Rvo JP.</p>
+    </footer>
 
     <script src="./script.js"></script>
 </body>
