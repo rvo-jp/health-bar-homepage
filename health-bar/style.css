@@ -151,7 +151,7 @@ iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #changelog {
@@ -178,10 +178,10 @@ iframe {
 }
 
 #newimg {
-    aspect-ratio: 4 / 3;
     background-position: center;
     background-size: cover;
     width: 50%;
+    height: 450px;
     background-image: url(./img/news1.jpeg);
     flex-shrink: 0;
 }
@@ -247,13 +247,13 @@ svg {
     border-radius: 4px;
 }
 #a1 {
-    background-image: url(./img/a1.jpeg);
+    background-image: url(./img/feature/1.jpeg);
 }
 #a2 {
-    background-image: url(./img/a2.jpeg);
+    background-image: url(./img/feature/2.jpeg);
 }
 #a3 {
-    background-image: url(./img/a3.jpeg);
+    background-image: url(./img/feature/3.jpeg);
 }
 
 #faq {
@@ -288,6 +288,7 @@ p.a.hidden {
     color: lightgray;
 }
 #send {
+    color: white;
     font-weight: normal;
     margin: 10px auto;
     background-color: #5a96e4;
