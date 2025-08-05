@@ -116,6 +116,26 @@ $download_text = [
     'vi'    => 'TẢI VỀ'
 ][$lang];
 
+$downloads_text = [
+    'en'    => '%s downloads',
+    'en-US' => '%s downloads',
+    'en-GB' => '%s downloads',
+    'es-ES' => '%s descargas',
+    'es-MX' => '%s descargas',
+    'de-DE' => '%s Downloads',
+    'fr-FR' => '%s téléchargements',
+    'fr-CA' => '%s téléchargements',
+    'pt-PT' => '%s downloads',
+    'pt-BR' => '%s downloads',
+    'id'    => '%s unduhan',
+    'ru'    => '%s загрузок',
+    'ko'    => '%s회 다운로드',
+    'zh-CN' => '已下载 %s 次',
+    'ja'    => '%s ダウンロード数',
+    'tr'    => '%s indirme',
+    'vi'    => '%s lượt tải xuống'
+][$lang];
+
 $preview = [
     'en'    => 'Preview',
     'en-US' => 'Preview',
@@ -176,6 +196,105 @@ $news_sub = [
     'vi'    => 'Health Bar liên tục được tối ưu hóa và cải tiến với các bản sửa lỗi nhỏ để hỗ trợ phiên bản mới nhất!'
 ][$lang];
 
+$news_type_update_bugfix = [
+    'en'    => 'UPDATE & BUGFIX',
+    'en-US' => 'UPDATE & BUGFIX',
+    'en-GB' => 'UPDATE & BUGFIX',
+    'es-ES' => 'ACTUALIZACIÓN Y CORRECCIÓN DE ERRORES',
+    'es-MX' => 'ACTUALIZACIÓN Y CORRECCIÓN DE ERRORES',
+    'de-DE' => 'UPDATE & FEHLERBEHEBUNG',
+    'fr-FR' => 'MISE À JOUR ET CORRECTION',
+    'fr-CA' => 'MISE À JOUR ET CORRECTION',
+    'pt-PT' => 'ATUALIZAÇÃO E CORREÇÃO DE ERROS',
+    'pt-BR' => 'ATUALIZAÇÃO E CORREÇÃO DE ERROS',
+    'id'    => 'PEMBARUAN & PERBAIKAN BUG',
+    'ru'    => 'ОБНОВЛЕНИЕ И ИСПРАВЛЕНИЕ ОШИБОК',
+    'ko'    => '업데이트 및 버그 수정',
+    'zh-CN' => '更新与修复',
+    'ja'    => 'アップデートとバグ修正',
+    'tr'    => 'GÜNCELLEME VE HATA DÜZELTMESİ',
+    'vi'    => 'CẬP NHẬT & SỬA LỖI',
+][$lang];
+
+$news_title = [
+    'en'    => 'Version 3.4.0 — July 27 2025',
+    'en-US' => 'Version 3.4.0 — July 27 2025',
+    'en-GB' => 'Version 3.4.0 — 27 July 2025',
+    'es-ES' => 'Versión 3.4.0 — 27 de julio de 2025',
+    'es-MX' => 'Versión 3.4.0 — 27 de julio de 2025',
+    'de-DE' => 'Version 3.4.0 — 27. Juli 2025',
+    'fr-FR' => 'Version 3.4.0 — 27 juillet 2025',
+    'fr-CA' => 'Version 3.4.0 — 27 juillet 2025',
+    'pt-PT' => 'Versão 3.4.0 — 27 de julho de 2025',
+    'pt-BR' => 'Versão 3.4.0 — 27 de julho de 2025',
+    'id'    => 'Versi 3.4.0 — 27 Juli 2025',
+    'ru'    => 'Версия 3.4.0 — 27 июля 2025 г.',
+    'ko'    => '버전 3.4.0 — 2025년 7월 27일',
+    'zh-CN' => '版本 3.4.0 — 2025年7月27日',
+    'ja'    => 'バージョン 3.4.0 — 2025年7月27日',
+    'tr'    => 'Sürüm 3.4.0 — 27 Temmuz 2025',
+    'vi'    => 'Phiên bản 3.4.0 — 27 Tháng 7, 2025'
+][$lang];
+
+$news_body = [
+    'en'    => "This update adds support for the newly introduced mob, the 'Happy Ghast,' from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.",
+    'en-US' => "This update adds support for the newly introduced mob, the 'Happy Ghast,' from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.",
+    'en-GB' => "This update adds support for the newly introduced mob, the 'Happy Ghast,' from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.",
+    'es-ES' => "Esta actualización añade compatibilidad con la nueva criatura, el 'Ghast Feliz', de Minecraft v1.21.90. También corrige un error que hacía que los Creepers siempre aparecieran cargados con rayos y soluciona un problema en el que los Ghasts se mostraban con un tamaño anormalmente grande.",
+    'es-MX' => "Esta actualización añade compatibilidad con la nueva criatura, el 'Ghast Feliz', de Minecraft v1.21.90. También corrige un error que hacía que los Creepers siempre aparecieran cargados con rayos y soluciona un problema en el que los Ghasts se mostraban con un tamaño anormalmente grande.",
+    'de-DE' => "Dieses Update fügt Unterstützung für den neu eingeführten Mob „Happy Ghast“ aus Minecraft v1.21.90 hinzu. Es behebt außerdem einen Fehler, durch den Creeper immer als vom Blitz getroffen erschienen, und ein Problem, bei dem Ghasts in einer abnormal großen Größe angezeigt wurden.",
+    'fr-FR' => "Cette mise à jour ajoute la prise en charge de la nouvelle créature, le 'Ghast Heureux', de Minecraft v1.21.90. Elle corrige également un bug qui faisait apparaître les Creepers toujours chargés par la foudre, ainsi qu’un problème où les Ghasts étaient affichés avec une taille anormalement grande.",
+    'fr-CA' => "Cette mise à jour ajoute la prise en charge de la nouvelle créature, le 'Ghast Heureux', de Minecraft v1.21.90. Elle corrige également un bug qui faisait apparaître les Creepers toujours chargés par la foudre, ainsi qu’un problème où les Ghasts étaient affichés avec une taille anormalement grande.",
+    'pt-PT' => "Esta atualização adiciona suporte para o novo mob 'Ghast Feliz' da versão 1.21.90 do Minecraft. Também corrige um bug que fazia os Creepers aparecerem sempre carregados com raios e resolve um problema em que os Ghasts eram exibidos em tamanho anormalmente grande.",
+    'pt-BR' => "Esta atualização adiciona suporte para o novo mob 'Ghast Feliz' da versão 1.21.90 do Minecraft. Também corrige um bug que fazia os Creepers aparecerem sempre carregados com raios e resolve um problema em que os Ghasts eram exibidos em tamanho anormalmente grande.",
+    'id'    => "Pembaruan ini menambahkan dukungan untuk mob baru, 'Happy Ghast', dari Minecraft v1.21.90. Ini juga memperbaiki bug yang menyebabkan Creeper selalu tampak terkena petir, dan memperbaiki masalah di mana Ghast ditampilkan dengan ukuran yang sangat besar.",
+    'ru'    => "Это обновление добавляет поддержку нового моба «Весёлый гаст» из Minecraft v1.21.90. Также исправлена ошибка, из-за которой криперы всегда выглядели как поражённые молнией, и проблема с чрезмерным размером гастов.",
+    'ko'    => "이번 업데이트는 Minecraft v1.21.90에 새로 추가된 몹 '행복한 가스트'를 지원합니다. 또한 크리퍼가 항상 번개에 맞은 상태로 나타나는 버그와 가스트가 비정상적으로 큰 크기로 표시되는 문제를 수정합니다.",
+    'zh-CN' => "此更新增加了对 Minecraft v1.21.90 新增生物“快乐恶魂”的支持，同时修复了苦力怕总是带电的问题，以及恶魂显示过大尺寸的问题。",
+    'ja'    => "このアップデートでは、Minecraft v1.21.90 で新たに追加されたモブ「ハッピーガスト」に対応しました。また、クリーパーが常に帯電状態で表示される不具合や、ガストが異常に大きなサイズで表示される問題も修正されました。",
+    'tr'    => "Bu güncelleme, Minecraft v1.21.90'da yeni eklenen 'Mutlu Ghast' yaratığına destek ekler. Ayrıca Creeper'ların her zaman yıldırım çarpmış gibi görünmesine neden olan bir hatayı ve Ghast'ların anormal şekilde büyük görünmesine neden olan bir sorunu düzeltir.",
+    'vi'    => "Bản cập nhật này bổ sung hỗ trợ cho mob mới 'Happy Ghast' từ Minecraft v1.21.90. Đồng thời, nó sửa lỗi khiến Creeper luôn xuất hiện dưới dạng bị sét đánh và khắc phục sự cố Ghast hiển thị với kích thước bất thường."
+][$lang];
+
+
+
+$f1_title = [
+    'en'    => 'Bar & Exact Value',
+    'es-ES' => 'Barra y Valor Exacto',
+    'es-MX' => 'Barra y Valor Exacto',
+    'de-DE' => 'Balken & Genaue Anzeige',
+    'fr-FR' => 'Barre et Valeur Précise',
+    'fr-CA' => 'Barre et Valeur Précise',
+    'pt-PT' => 'Barra e Valor Exato',
+    'pt-BR' => 'Barra e Valor Exato',
+    'id'    => 'Bilah & Nilai Tepat',
+    'ru'    => 'Полоса и Точное Значение',
+    'ko'    => '체력바와 정확한 수치',
+    'zh-CN' => '血条与精确值',
+    'ja'    => 'バーと正確な値',
+    'tr'    => 'Çubuk ve Kesin Değer',
+    'vi'    => 'Thanh & Giá trị chính xác'
+][$lang];
+$f1_description = [
+    'en'    => 'Shows a health bar and exact health value above all vanilla mobs, making it easy to track their remaining HP.',
+    'en-US' => 'Shows a health bar and exact health value above all vanilla mobs, making it easy to track their remaining HP.',
+    'en-GB' => 'Shows a health bar and exact health value above all vanilla mobs, making it easy to track their remaining HP.',
+    'es-ES' => 'Muestra una barra de salud y el valor exacto de vida sobre todos los mobs vanilla, facilitando el seguimiento de su HP restante.',
+    'es-MX' => 'Muestra una barra de salud y la cantidad exacta de vida sobre todos los mobs vanilla, lo que hace más fácil rastrear su HP restante.',
+    'de-DE' => 'Zeigt über allen Vanilla-Mobs eine Gesundheitsleiste und den genauen Lebenswert an, um das verbleibende HP leicht nachzuverfolgen.',
+    'fr-FR' => 'Affiche une barre de vie et la valeur exacte des points de vie au-dessus de tous les mobs vanilla, pour suivre facilement leur santé restante.',
+    'fr-CA' => 'Affiche une barre de vie et la valeur exacte des points de vie au-dessus de tous les mobs vanilla, ce qui facilite le suivi de leur santé restante.',
+    'pt-PT' => 'Mostra uma barra de vida e o valor exato da vida acima de todos os mobs vanilla, facilitando o acompanhamento dos seus HP restantes.',
+    'pt-BR' => 'Mostra uma barra de vida e o valor exato da vida acima de todos os mobs vanilla, facilitando o acompanhamento dos seus pontos de vida restantes.',
+    'id'    => 'Menampilkan bar kesehatan dan nilai HP yang tepat di atas semua mob vanilla, sehingga mudah melacak sisa HP-nya.',
+    'ru'    => 'Отображает шкалу здоровья и точное количество HP над всеми ванильными мобами, что облегчает отслеживание их оставшегося здоровья.',
+    'ko'    => '모든 바닐라 몹 위에 체력 바와 정확한 체력 값을 표시하여 남은 체력을 쉽게 확인할 수 있습니다.',
+    'zh-CN' => '在所有原版生物上方显示生命条和精确生命值，方便追踪其剩余生命值。',
+    'ja'    => 'すべてのバニラモブの上にヘルスバーと正確な体力値を表示し、残りHPを把握しやすくします。',
+    'tr'    => 'Tüm vanilla yaratıkların üzerinde sağlık çubuğu ve kesin sağlık değeri gösterir, kalan HP’lerini takip etmeyi kolaylaştırır.',
+    'vi'    => 'Hiển thị thanh máu và giá trị máu chính xác phía trên tất cả mob vanilla, giúp dễ dàng theo dõi lượng HP còn lại của chúng.'
+][$lang];
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">
@@ -226,7 +345,7 @@ $news_sub = [
     <header>
         <div id="inner">
             <a href="/">
-                <h2 id="logo"><svg width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gamingGradient" x1="25%" y1="0%" x2="75%" y2="100%"><stop offset="0%" stop-color="#00ffee"/><stop offset="50%" stop-color="#8e2eff"/><stop offset="100%" stop-color="#ff00aa"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="m6.5 10.5 v-0.5 l-3 -4 h21.5 l3 4 v1.5 l-3 4 h-3 h3 l3 4 v1.5 l-6 8 l-3 -4 h-2.5 v-10 v10 h-10 v-14.5 h15.5" stroke="url(#gamingGradient)" stroke-width="1.5" fill="none" filter="url(#glow)"/></svg> Rvo Works</h2>
+                <h3 id="logo"><svg width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gamingGradient" x1="25%" y1="0%" x2="75%" y2="100%"><stop offset="0%" stop-color="#00ffee"/><stop offset="50%" stop-color="#8e2eff"/><stop offset="100%" stop-color="#ff00aa"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="m6.5 10.5 v-0.5 l-3 -4 h21.5 l3 4 v1.5 l-3 4 h-3 h3 l3 4 v1.5 l-6 8 l-3 -4 h-2.5 v-10 v10 h-10 v-14.5 h15.5" stroke="url(#gamingGradient)" stroke-width="1.5" fill="none" filter="url(#glow)"/></svg> Rvo Works</h3>
             </a>
             <div id="nav">
                 <p>Contact</p>
@@ -243,17 +362,17 @@ $news_sub = [
             <p id="sub"><?= $subtitle ?></p>
             <div id="dl">
                 <a href="./download/download.php" download><p id="download"><?= $download_text ?> <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg></p></a>
-                <p id="counter"><?= number_format((int)file_get_contents('download/count.txt')) ?> downloads</p>
+                <p id="counter"><?= sprintf($downloads_text, file_get_contents('download/count.txt')) ?></p>
             </div>
         </div>
     </div>
 
     <div id="menu">
         <div id="mn">
-            <a href="./#preview"><?= $preview ?></a>
-            <a href="./#changelog"><?= $news ?></a>
-            <a href="./#features">Features</a>
-            <a href="./#faq">FAQ & Feedback</a>
+            <a href="./?lang=<?= $lang ?>#preview"><?= $preview ?></a>
+            <a href="./?lang=<?= $lang ?>#changelog"><?= $news ?></a>
+            <a href="./?lang=<?= $lang ?>#features">Features</a>
+            <a href="./?lang=<?= $lang ?>#faq">FAQ & Feedback</a>
         </div>
     </div>
 
@@ -270,9 +389,9 @@ $news_sub = [
         <div id="latest">
             <div id="newimg"></div>
             <div class="des">
-                <p class="type">UPDATE & BUGFIX</p>
-                <h2>Version 3.4.0 — July 27 2025</h2>
-                <p>This update adds support for the newly introduced mob, the "Happy Ghast," from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.</p>
+                <p class="type"><?= $news_type_update_bugfix ?></p>
+                <h2><?= $news_title ?></h2>
+                <p><?= $news_body ?></p>
                 <a href="http://github.com/rvo-jp/health-bar/">Learn more on GitHub<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11254)"> <path d="M10 17L15 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 12L10 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11254"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></a>
             </div>
         </div>
@@ -291,8 +410,8 @@ $news_sub = [
         <div>
             <div id="a1" class="pic"></div>
             <div>
-                <h1>Bar & Counter</h1>
-                <p>Shows a health bar and exact health value above all vanilla mobs, making it easy to track their remaining HP.</p>
+                <h1><?= $f1_title ?></h1>
+                <p><?= $f1_description ?></p>
             </div>
         </div>
         <hr>
