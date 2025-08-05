@@ -1,21 +1,233 @@
 <?php
-$lang_list = ['en-US', 'ja'];
+$lang_list = [
+    'en', 'en-US', 'en-GB',
+    'es-ES', 'es-MX',
+    'de-DE',
+    'fr-FR', 'fr-CA',
+    'pt-PT', 'pt-BR',
+    'id',
+    'ru',
+    'ko',
+    'zh-CN',
+    'ja',
+    'tr',
+    'vi'
+];
 $lang = isset($_GET['lang']) ? $_GET['lang'] : explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE'])[0];
-if (!in_array($lang, $lang_list, true)) $lang = 'en-US';
-?>
+if (!in_array($lang, $lang_list, true)) $lang = 'en';
 
+$currency_by_lang = [
+    'en'    => 'USD',  // 英語（汎用）
+    'en-US' => 'USD',  // アメリカ合衆国ドル
+    'en-GB' => 'GBP',  // イギリス ポンド
+    'es-ES' => 'EUR',  // スペイン ユーロ
+    'es-MX' => 'MXN',  // メキシコ ペソ
+    'de-DE' => 'EUR',  // ドイツ ユーロ
+    'fr-FR' => 'EUR',  // フランス ユーロ
+    'fr-CA' => 'CAD',  // カナダ ドル
+    'pt-PT' => 'EUR',  // ポルトガル ユーロ
+    'pt-BR' => 'BRL',  // ブラジル レアル
+    'id'    => 'IDR',  // インドネシア ルピア
+    'ru'    => 'RUB',  // ロシア ルーブル
+    'ko'    => 'KRW',  // 韓国 ウォン
+    'zh-CN' => 'CNY',  // 中国 人民元
+    'ja'    => 'JPY',  // 日本 円
+    'tr'    => 'TRY',  // トルコ リラ
+    'vi'    => 'VND',  // ベトナム ドン
+];
+
+$title = [
+    'en'    => 'Health Bar - Minecraft Resource Pack',
+    'en-US' => 'Health Bar - Minecraft Resource Pack',
+    'en-GB' => 'Health Bar - Minecraft Resource Pack',
+    'es-ES' => 'Barra de salud - Paquete de recursos de Minecraft',
+    'es-MX' => 'Barra de salud - Paquete de recursos de Minecraft',
+    'pt-PT' => 'Barra de Vida - Pacote de Recursos do Minecraft',
+    'pt-BR' => 'Barra de Vida - Pacote de Recursos do Minecraft',
+    'fr-FR' => 'Barre de vie - Pack de ressources Minecraft',
+    'fr-CA' => 'Barre de vie - Pack de ressources Minecraft',
+    'de-DE' => 'Health Bar - Minecraft Ressourcenpaket',
+    'id'    => 'Health Bar - Paket Resource Minecraft',
+    'ru'    => 'Индикатор Здоровья - Ресурс-пак для Minecraft',
+    'ko'    => 'Health Bar - 마인크래프트 리소스 팩',
+    'zh-CN' => 'Health Bar - 我的世界资源包',
+    'ja'    => 'Health Bar - マインクラフト リソースパック',
+    'tr'    => 'Health Bar - Minecraft Kaynak Paketi',
+    'vi'    => 'Health Bar - Gói tài nguyên Minecraft',
+][$lang];
+
+$description = [
+    'en'    => 'Adds a visual health indicator above all mobs in Minecraft, showing both a health bar and the exact health value.',
+    'en-US' => 'Adds a visual health indicator above all mobs in Minecraft, showing both a health bar and the exact health value.',
+    'en-GB' => 'Adds a visual health indicator above all mobs in Minecraft, showing both a health bar and the exact health value.',
+    'es-ES' => 'Agrega un indicador visual de salud sobre todas las criaturas en Minecraft, mostrando una barra de salud y el valor exacto de salud.',
+    'es-MX' => 'Agrega un indicador visual de salud sobre todas las criaturas en Minecraft, mostrando una barra de salud y el valor exacto de salud.',
+    'de-DE' => 'Fügt über allen Kreaturen in Minecraft einen visuellen Gesundheitsindikator hinzu, der eine Gesundheitsleiste und den genauen Gesundheitswert anzeigt.',
+    'fr-FR' => 'Ajoute un indicateur de santé visuel au-dessus de tous les monstres dans Minecraft, affichant une barre de santé et la valeur exacte des points de vie.',
+    'fr-CA' => 'Ajoute un indicateur de santé visuel au-dessus de tous les monstres dans Minecraft, affichant une barre de santé et la valeur exacte des points de vie.',
+    'pt-PT' => 'Adiciona um indicador visual de saúde acima de todos os mobs no Minecraft, mostrando uma barra de saúde e o valor exato da vida.',
+    'pt-BR' => 'Adiciona um indicador visual de saúde acima de todos os mobs no Minecraft, mostrando uma barra de saúde e o valor exato da vida.',
+    'id'    => 'Menambahkan indikator kesehatan visual di atas semua mob di Minecraft, menampilkan bilah kesehatan dan nilai kesehatan yang tepat.',
+    'ru'    => 'Добавляет визуальный индикатор здоровья над всеми мобами в Minecraft, показывая шкалу здоровья и точное значение здоровья.',
+    'ko'    => '마인크래프트의 모든 몹 위에 시각적인 체력 표시기를 추가하며, 체력 바와 정확한 체력 수치를 표시합니다.',
+    'zh-CN' => '在 Minecraft 所有生物上方添加可视化生命值指示器，显示生命条和精确生命值。',
+    'ja'    => 'すべてのモブの上に視覚的な体力インジケーターを追加します。体力バーと正確な体力値を表示します。',
+    'tr'    => 'Minecraft\'teki tüm yaratıkların üzerinde bir sağlık çubuğu ve kesin sağlık değerini gösteren görsel bir sağlık göstergesi ekler.',
+    'vi'    => 'Thêm chỉ báo máu hiển thị phía trên tất cả mob trong Minecraft, hiển thị thanh máu và giá trị máu chính xác.',
+][$lang];
+
+$subtitle = [
+    'en'    => 'A visual health indicator',
+    'en-US' => 'A visual health indicator',
+    'en-GB' => 'A visual health indicator',
+    'es-ES' => 'Un indicador visual de salud',
+    'es-MX' => 'Un indicador visual de salud',
+    'de-DE' => 'Eine visuelle Gesundheitsanzeige',
+    'fr-FR' => 'Un indicateur visuel de santé',
+    'fr-CA' => 'Un indicateur visuel de santé',
+    'pt-PT' => 'Um indicador visual de saúde',
+    'pt-BR' => 'Um indicador visual de saúde',
+    'id'    => 'Indikator kesehatan visual',
+    'ru'    => 'Визуальный индикатор здоровья',
+    'ko'    => '시각적인 체력 표시기',
+    'zh-CN' => '视觉生命值指示器',
+    'ja'    => '視覚的な体力インジケーター',
+    'tr'    => 'Görsel sağlık göstergesi',
+    'vi'    => 'Bộ chỉ báo sức khỏe trực quan'
+][$lang];
+
+$download_text = [
+    'en'    => 'DOWNLOAD',
+    'en-US' => 'DOWNLOAD',
+    'en-GB' => 'DOWNLOAD',
+    'es-ES' => 'DESCARGAR',
+    'es-MX' => 'DESCARGAR',
+    'de-DE' => 'HERUNTERLADEN',
+    'fr-FR' => 'TÉLÉCHARGER',
+    'fr-CA' => 'TÉLÉCHARGER',
+    'pt-PT' => 'DESCARREGAR',
+    'pt-BR' => 'BAIXAR',
+    'id'    => 'UNDUH',
+    'ru'    => 'СКАЧАТЬ',
+    'ko'    => '다운로드',
+    'zh-CN' => '下载',
+    'ja'    => 'ダウンロード',
+    'tr'    => 'İNDİR',
+    'vi'    => 'TẢI VỀ'
+][$lang];
+
+$preview = [
+    'en'    => 'Preview',
+    'en-US' => 'Preview',
+    'en-GB' => 'Preview',
+    'es-ES' => 'Vista previa',
+    'es-MX' => 'Vista previa',
+    'de-DE' => 'Vorschau',
+    'fr-FR' => 'Aperçu',
+    'fr-CA' => 'Aperçu',
+    'pt-PT' => 'Pré-visualização',
+    'pt-BR' => 'Pré-visualização',
+    'id'    => 'Pratinjau',
+    'ru'    => 'Предпросмотр',
+    'ko'    => '미리보기',
+    'zh-CN' => '预览',
+    'ja'    => 'プレビュー',
+    'tr'    => 'Önizleme',
+    'vi'    => 'Xem trước'
+][$lang];
+
+$news = [
+    'en'    => 'News',
+    'en-US' => 'News',
+    'en-GB' => 'News',
+    'es-ES' => 'Noticias',
+    'es-MX' => 'Noticias',
+    'de-DE' => 'Neuigkeiten',
+    'fr-FR' => 'Actualités',
+    'fr-CA' => 'Actualités',
+    'pt-PT' => 'Notícias',
+    'pt-BR' => 'Notícias',
+    'id'    => 'Berita',
+    'ru'    => 'Новости',
+    'ko'    => '소식',
+    'zh-CN' => '新闻',
+    'ja'    => 'ニュース',
+    'tr'    => 'Haberler',
+    'vi'    => 'Tin tức'
+][$lang];
+
+$news_sub = [
+    'en'    => 'Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!',
+    'en-US' => 'Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!',
+    'en-GB' => 'Health Bar is continuously being optimised and refined with minor bug fixes to support the latest version!',
+    'es-ES' => '¡Health Bar se optimiza y mejora continuamente con correcciones menores para ser compatible con la última versión!',
+    'es-MX' => '¡Health Bar se optimiza y mejora continuamente con correcciones menores para ser compatible con la última versión!',
+    'de-DE' => 'Health Bar wird kontinuierlich optimiert und mit kleinen Fehlerbehebungen aktualisiert, um die neueste Version zu unterstützen!',
+    'fr-FR' => 'Health Bar est continuellement optimisé et amélioré avec des corrections mineures pour prendre en charge la dernière version !',
+    'fr-CA' => 'Health Bar est continuellement optimisé et amélioré avec des corrections mineures pour prendre en charge la dernière version !',
+    'pt-PT' => 'Health Bar está a ser continuamente otimizado e melhorado com pequenas correções para suportar a versão mais recente!',
+    'pt-BR' => 'Health Bar está sendo continuamente otimizado e aprimorado com pequenas correções para oferecer suporte à versão mais recente!',
+    'id'    => 'Health Bar terus dioptimalkan dan diperbaiki dengan perbaikan bug kecil untuk mendukung versi terbaru!',
+    'ru'    => 'Health Bar постоянно оптимизируется и улучшается с помощью незначительных исправлений ошибок для поддержки последней версии!',
+    'ko'    => 'Health Bar는 최신 버전을 지원하기 위해 지속적으로 최적화되고 버그 수정이 이루어지고 있습니다!',
+    'zh-CN' => 'Health Bar 正在不断优化和改进，并进行小幅修复以支持最新版本！',
+    'ja'    => 'Health Bar は最新バージョンに対応するため、継続的に最適化とバグ修正を行っています！',
+    'tr'    => 'Health Bar, en son sürümü desteklemek için küçük hata düzeltmeleriyle sürekli olarak optimize edilmekte ve geliştirilmektedir!',
+    'vi'    => 'Health Bar liên tục được tối ưu hóa và cải tiến với các bản sửa lỗi nhỏ để hỗ trợ phiên bản mới nhất!'
+][$lang];
+
+?>
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Bar | Rvo Works</title>
+    
+    <title><?= $title?> | Rvo Works</title>
+    <meta name="description" content="<?= $description?>">
+    <link rel="icon" href="/common/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/common/apple-touch-icon.png">
+    
+    <link rel="canonical" href="https://rvo.jp/health-bar/">
+    <link rel="alternate" hreflang="en"    href="https://rvo.jp/health-bar/?lang=en">
+    <link rel="alternate" hreflang="en-US" href="https://rvo.jp/health-bar/?lang=en-US">
+    <link rel="alternate" hreflang="en-GB" href="https://rvo.jp/health-bar/?lang=en-GB">
+    <link rel="alternate" hreflang="es-ES" href="https://rvo.jp/health-bar/?lang=es-ES">
+    <link rel="alternate" hreflang="es-MX" href="https://rvo.jp/health-bar/?lang=es-MX">
+    <link rel="alternate" hreflang="de-DE" href="https://rvo.jp/health-bar/?lang=de-DE">
+    <link rel="alternate" hreflang="fr-FR" href="https://rvo.jp/health-bar/?lang=fr-FR">
+    <link rel="alternate" hreflang="fr-CA" href="https://rvo.jp/health-bar/?lang=fr-CA">
+    <link rel="alternate" hreflang="pt-PT" href="https://rvo.jp/health-bar/?lang=pt-PT">
+    <link rel="alternate" hreflang="pt-BR" href="https://rvo.jp/health-bar/?lang=pt-BR">
+    <link rel="alternate" hreflang="id"    href="https://rvo.jp/health-bar/?lang=id">
+    <link rel="alternate" hreflang="ru"    href="https://rvo.jp/health-bar/?lang=ru">
+    <link rel="alternate" hreflang="ko"    href="https://rvo.jp/health-bar/?lang=ko">
+    <link rel="alternate" hreflang="zh-CN" href="https://rvo.jp/health-bar/?lang=zh-CN">
+    <link rel="alternate" hreflang="ja"    href="https://rvo.jp/health-bar/?lang=ja">
+    <link rel="alternate" hreflang="tr"    href="https://rvo.jp/health-bar/?lang=tr">
+    <link rel="alternate" hreflang="vi"    href="https://rvo.jp/health-bar/?lang=vi">
+    <link rel="alternate" hreflang="x-default" href="https://rvo.jp/health-bar/">
+
+    <meta property="og:title" content="<?= $title?>">
+    <meta property="og:description" content="<?= $description?>">
+    <meta property="og:image" content="https://rvo.jp/health-bar/img/og-image.jpg">
+    <meta property="og:url" content="https://rvo.jp/health-bar/">
+    <meta property="og:site_name" content="Rvo Works">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= $title?>">
+    <meta name="twitter:description" content="<?= $description?>">
+    <meta name="twitter:image" content="https://rvo.jp/health-bar/img/og-image.jpg">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <div id="inner">
-            <a href="/"><h2 id="logo"><svg width="35px" height="35px" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d=" m1 4 h22 l3 4 v1 l-3 4 h-3 v1 h3 l3 4 v1 l-6 8 l-3 -4 h-2 v-10 h-1 v10 h-10 v-14 h16 v-1 h-16 l-3 -4"fill="#fff"/></svg> Rvo Works</h2></a> 
+            <a href="/">
+                <h2 id="logo"><svg width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="gamingGradient" x1="25%" y1="0%" x2="75%" y2="100%"><stop offset="0%" stop-color="#00ffee"/><stop offset="50%" stop-color="#8e2eff"/><stop offset="100%" stop-color="#ff00aa"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="m6.5 10.5 v-0.5 l-3 -4 h21.5 l3 4 v1.5 l-3 4 h-3 h3 l3 4 v1.5 l-6 8 l-3 -4 h-2.5 v-10 v10 h-10 v-14.5 h15.5" stroke="url(#gamingGradient)" stroke-width="1.5" fill="none" filter="url(#glow)"/></svg> Rvo Works</h2>
+            </a>
             <div id="nav">
                 <p>Contact</p>
                 <p>Addons</p>
@@ -28,9 +240,9 @@ if (!in_array($lang, $lang_list, true)) $lang = 'en-US';
     <div id="top">
         <div id="top_text">
             <p id="name">Health Bar</p>
-            <p id="sub">A simple health indicator</p>
+            <p id="sub"><?= $subtitle ?></p>
             <div id="dl">
-                <a href="./download/download.php" download><p id="download">DOWNLOAD <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg></p></a>
+                <a href="./download/download.php" download><p id="download"><?= $download_text ?> <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg></p></a>
                 <p id="counter"><?= number_format((int)file_get_contents('download/count.txt')) ?> downloads</p>
             </div>
         </div>
@@ -38,31 +250,22 @@ if (!in_array($lang, $lang_list, true)) $lang = 'en-US';
 
     <div id="menu">
         <div id="mn">
-            <a href="./#preview"><p>Preview</p></a>
-            <a href="./#changelog"><p>News</p></a>
-            <a href="./#features"><p>Features</p></a>
-            <a href="./#faq"><p>FAQ & Feedback</p></a>
+            <a href="./#preview"><?= $preview ?></a>
+            <a href="./#changelog"><?= $news ?></a>
+            <a href="./#features">Features</a>
+            <a href="./#faq">FAQ & Feedback</a>
         </div>
     </div>
 
     <div id="preview">
-        <h1><?= [
-            'en-US'=>'Preview',
-            'ja'=>'プレビュー'
-        ][$lang] ?></h1>
-        <iframe src="https://www.youtube.com/embed/0qYaEBuM-7E?si=IDqwGRkvqHP3hDrR&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1><?= $preview ?></h1>
+        <iframe src="https://www.youtube.com/embed/dq4LVuiWNjs?si=kB_zIH2BrIp6nmjt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <div id="changelog">
         <div id="news">
-            <h1><?=[
-                'en-US' => 'News',
-                'ja' => 'ニュース'
-            ][$lang]?></h1>
-            <h3><?= [
-                'en-US' => 'Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!',
-                'ja' => 'Health Bar は最新バージョンに対応するため、継続的に最適化とバグ修正を行っています！'
-            ][$lang] ?></h3>
+            <h1><?= $news ?></h1>
+            <h3><?= $news_sub ?></h3>
         </div>
         <div id="latest">
             <div id="newimg"></div>
