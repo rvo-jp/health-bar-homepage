@@ -1,16 +1,113 @@
-[2025-08-01 15:26:59] ::1 en
-uqwbdiuqgwf
-qeofhqewfouowiehfiowehfoiqwehfoie of oqief oiqe foie foiqueoiu foique foue foqi ofpef
+1746314948 186.189.71.139
+[2025-05-04 08:29:08] juaneduardo.20161991@gmail.com
+https://rvo.jp/health-bar/download
 
-[2025-08-01 15:27:41] ::1 
-dgvweg
+1746314948 186.189.71.139
+[2025-05-04 08:29:08] juaneduardo.20161991@gmail.com
+https://rvo.jp/health-bar/download
 
-[2025-08-01 15:29:15] ::1 
-as
+1746403729 201.103.229.226
+[2025-05-05 09:08:49] 
+Te hackean no lo hagan, es muy peligroso.
 
-[2025-08-05 20:08:09] ::1 ja
-ああｗれｆ
+1746488235 103.235.93.161
+[2025-05-06 08:37:15] 
+Cool
 
-[2025-08-06 01:49:43] ::1 ja
-qw
+1747108003 103.158.13.185
+[2025-05-13 12:46:43] halo bang
+Mampir
+
+1747108091 103.158.13.185
+[2025-05-13 12:48:11] halo bang
+Mampir
+
+1747665825 1.20.154.210
+[2025-05-19 23:43:45] 
+H
+
+1749087759 131.108.86.225
+[2025-06-05 10:42:39] janeiro5581@gmail.com
+Hi,
+
+Currently, when I am using your amazing resource pack, my skin's set for default (Steve). If you could please look into it, I'd be thankful.
+
+Best regards,
+vilanova5869
+
+1749616038 201.198.177.27
+[2025-06-11 13:27:18] matimoma1908@gmail.com
+Hello, I'm currently using the win 10 version and for some reason creepers always appear as charged even if they aren't, it isnt a compatibility issue because that is he only addon i have and i literally just downloaded it again today to see if maybe i had an out of date version, if you need any other info i'll happily provide it
+
+1749885482 49.43.26.124
+[2025-06-14 16:18:02] 
+Yo! Amazing pack, tho one problem: creepers appear charged even when they aren't. Anyways I figured out a fix:
+In render_controllers of entity/creeper.json 
+replace 
+"controller.render.creeper_armor", 
+with
+{"controller.render.creeper_armor": "query.is_powered"},
+
+1750939557 43.231.29.96
+[2025-06-26 21:05:57] Myquadsarehuge@gmail.com
+Hello I would like to report about a bug with normal ghasts  (doesn't happen with happy ghasts). it makes the ghast really big! I think it is really funny but it is sometimes annoying to understand if the ghast is close enough to shoot me. I really like this resource pack and I hope you fix it soon. best of luck!
+
+1751042425 92.253.236.236
+[2025-06-28 01:40:25] istaszankoi@gmail.com
+W texture pack, however, in the new 1.21.92 update creeper's texture is fully charged about to blow up, and ghast is bigger than it should be. If its not possible to fix it, I would like to know that anyway.
+
+1751250748 189.169.106.113
+[2025-06-30 11:32:28] 
+good
+
+1751446969 36.75.23.43
+[2025-07-02 18:02:49] gusagus0589@gmail.com
+tai
+
+1751472151 106.219.145.200
+[2025-07-03 01:02:31] 
+The creeper always appears as charged creeper and the ghast texture is 2 or 3 times increased
+
+1751846718 24.129.16.81
+[2025-07-07 09:05:18] joechiarle0429@gmail.com
+are you aware of the issues with the regular ghasts being super over sized, and creepers all appearing charged?
+
+1751903437 172.56.153.34
+[2025-07-08 00:50:37] p000557812@gmail.com
+Creepers are showing up as charged, and ghasts are looking huge
+
+1752122721 120.229.252.59
+[2025-07-10 13:45:21] 
+there is no health bar of the newest updated mob "happy ghast" 
+and,when this addon is working,the skin of palyer become Steve
+
+1752500047 103.40.121.88
+[2025-07-14 22:34:07] gyy
+Yyy
+
+1752818282 86.98.198.128
+[2025-07-18 14:58:02] asimahmad078@gmail.com
+1.21.94.1
+
+There is a bug where creeper always looks charged one.
+
+Please fix it.
+
+1753024116 182.3.4.146
+[2025-07-21 00:08:36] 
+Ahh kimochihh yametehh ryoo channwann nikmat nyooo 💦🤤
+
+1753310893 92.106.22.8
+[2025-07-24 07:48:13] 
+Update please
+
+1753733800 159.100.13.200
+[2025-07-29 05:16:40] 
+
+
+1753733894 159.100.13.200
+[2025-07-29 05:18:14] 
+
+
+
 

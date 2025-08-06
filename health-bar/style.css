@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 * {
     font-family: "Poppins", sans-serif;
@@ -94,7 +94,7 @@ header {
 }
 #name {
     font-size: 64px;
-    font-weight: normal;
+    font-weight: 400;
     margin: 0;
 }
 #sub {
@@ -109,10 +109,10 @@ header {
     align-items: center;
 }
 #download {
-    background-color: #5a96e4;
+    background-color: #4786d8;
     padding: 15px 25px;
     border-radius: 3px;
-    font-weight: normal;
+    font-weight: 400;
     transition: transform 0.2s ease;
 }
 #download:hover {
@@ -193,18 +193,18 @@ iframe {
     color: lightgray;
 }
 .des h2 {
-    font-weight: normal;
+    font-weight: 400;
 }
 .des li {
     color: lightgray;
 }
 
 #changelog .type {
-    font-weight: bold;
+    font-weight: 700;
     color: #7259ff;
 }
 .des a {
-    font-weight: normal;
+    font-weight: 400;
     color: white;
 }
 svg {
@@ -222,7 +222,7 @@ svg {
 #donate {
     padding: 12px 30px;
     display: inline-block;
-    font-weight: normal;
+    font-weight: 400;
     color: #5a96e4;
     border-radius: 3px;
     border: solid #5a96e4 1px;
@@ -301,9 +301,9 @@ p.a.hidden {
     color: lightgray;
 }
 #send {
-    font-weight: normal;
+    font-weight: 400;
     margin: 10px auto;
-    background-color: #5a96e4;
+    background-color: #4786d8;
     border-radius: 3px;
     padding: 10px 20px;
     width: fit-content;
@@ -334,3 +334,27 @@ input {
 #thankyou {
     display: none;
 }
+
+@media (max-width: 900px) {
+    #top_text {
+        margin: auto;
+    }
+    #features>div {
+        flex-direction: column;
+    }
+    #features .pic {
+        width: 100%;
+    }
+
+    #latest {
+        flex-direction: column;
+    }
+    #newimg {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    
+}
+
