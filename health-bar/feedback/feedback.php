@@ -5,13 +5,13 @@ $data = json_decode($input, true);
 
 // 必要な情報を取得
 $feedback = $data['feedback'];
-$email = isset($data['email']) ? $data['email'] : '';
+$lang = $data['lang'];
 
 // フィードバックをテキストファイルに保存
 $ip = $_SERVER['REMOTE_ADDR']; // ユーザーのIPアドレスを取得
 $timestamp = date("Y-m-d H:i:s");
 
-file_put_contents('feedback.txt', "[$timestamp] $ip $email\n$feedback\n\n", FILE_APPEND);
+file_put_contents('feedback.txt', "[$timestamp] $ip $lang\n$feedback\n\n", FILE_APPEND);
 
 // 成功レスポンスを返す
 echo json_encode(['status' => 'success']);

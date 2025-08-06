@@ -115,7 +115,6 @@ $download_text = [
     'tr'    => 'İNDİR',
     'vi'    => 'TẢI VỀ'
 ][$lang];
-
 $downloads_text = [
     'en'    => '%s downloads',
     'en-US' => '%s downloads',
@@ -175,7 +174,6 @@ $news = [
     'tr'    => 'Haberler',
     'vi'    => 'Tin tức'
 ][$lang];
-
 $news_sub = [
     'en'    => 'Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!',
     'en-US' => 'Health Bar is continuously being optimized and refined with minor bug fixes to support the latest version!',
@@ -196,6 +194,7 @@ $news_sub = [
     'vi'    => 'Health Bar liên tục được tối ưu hóa và cải tiến với các bản sửa lỗi nhỏ để hỗ trợ phiên bản mới nhất!'
 ][$lang];
 
+
 $news_type_update_bugfix = [
     'en'    => 'UPDATE & BUGFIX',
     'en-US' => 'UPDATE & BUGFIX',
@@ -215,7 +214,6 @@ $news_type_update_bugfix = [
     'tr'    => 'GÜNCELLEME VE HATA DÜZELTMESİ',
     'vi'    => 'CẬP NHẬT & SỬA LỖI',
 ][$lang];
-
 $news_title = [
     'en'    => 'Version 3.4.0 — July 27 2025',
     'en-US' => 'Version 3.4.0 — July 27 2025',
@@ -235,7 +233,6 @@ $news_title = [
     'tr'    => 'Sürüm 3.4.0 — 27 Temmuz 2025',
     'vi'    => 'Phiên bản 3.4.0 — 27 Tháng 7, 2025'
 ][$lang];
-
 $news_body = [
     'en'    => "This update adds support for the newly introduced mob, the 'Happy Ghast,' from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.",
     'en-US' => "This update adds support for the newly introduced mob, the 'Happy Ghast,' from Minecraft v1.21.90. It also fixes a bug that caused Creepers to always appear charged with lightning, and resolves an issue where Ghasts were displayed at an abnormally large size.",
@@ -257,9 +254,10 @@ $news_body = [
 ][$lang];
 
 
-
 $f1_title = [
     'en'    => 'Bar & Exact Value',
+    'en-US' => 'Bar & Exact Value',
+    'en-GB' => 'Bar & Exact Value',
     'es-ES' => 'Barra y Valor Exacto',
     'es-MX' => 'Barra y Valor Exacto',
     'de-DE' => 'Balken & Genaue Anzeige',
@@ -295,19 +293,215 @@ $f1_description = [
     'vi'    => 'Hiển thị thanh máu và giá trị máu chính xác phía trên tất cả mob vanilla, giúp dễ dàng theo dõi lượng HP còn lại của chúng.'
 ][$lang];
 
+$f2_title = [
+    'en'    => 'Color-coded Health',
+    'en-US' => 'Color-coded Health',
+    'en-GB' => 'Colour-coded Health',
+    'es-ES' => 'Salud codificada por color',
+    'es-MX' => 'Salud codificada por color',
+    'de-DE' => 'Farbige Lebensanzeige',
+    'fr-FR' => 'Barre de vie colorée',
+    'fr-CA' => 'Barre de vie colorée',
+    'pt-PT' => 'Saúde com código de cores',
+    'pt-BR' => 'Saúde com código de cores',
+    'id'    => 'Kesehatan Berwarna',
+    'ru'    => 'Цветовая индикация здоровья',
+    'ko'    => '색상별 체력 표시',
+    'zh-CN' => '颜色区分的生命值',
+    'ja'    => '色で分かる体力',
+    'tr'    => 'Renk Kodlu Can Göstergesi',
+    'vi'    => 'Thanh máu phân màu',
+][$lang];
+$f2_description =  [
+    'en'    => 'The health bar changes color based on the remaining health: green (51-100%), yellow (21-50%), and red (1-20%)—making it easy to assess a mob’s condition at a glance.',
+    'en-US' => 'The health bar changes color based on the remaining health: green (51-100%), yellow (21-50%), and red (1-20%)—making it easy to assess a mob’s condition at a glance.',
+    'en-GB' => 'The health bar changes colour based on the remaining health: green (51-100%), yellow (21-50%), and red (1-20%)—making it easy to assess a mob’s condition at a glance.',
+    'es-ES' => 'La barra de salud cambia de color según la salud restante: verde (51–100%), amarillo (21–50%) y rojo (1–20%), lo que facilita evaluar el estado de un mob de un vistazo.',
+    'es-MX' => 'La barra de salud cambia de color según la salud restante: verde (51–100%), amarillo (21–50%) y rojo (1–20%), lo que hace fácil ver el estado de un mob rápidamente.',
+    'de-DE' => 'Die Lebensanzeige ändert ihre Farbe je nach verbleibender Gesundheit: grün (51–100 %), gelb (21–50 %) und rot (1–20 %) – so lässt sich der Zustand eines Mobs auf einen Blick erkennen.',
+    'fr-FR' => 'La barre de vie change de couleur en fonction de la santé restante : vert (51–100 %), jaune (21–50 %) et rouge (1–20 %), ce qui permet d’évaluer rapidement l’état d’un mob.',
+    'fr-CA' => 'La barre de vie change de couleur selon la santé restante : vert (51–100 %), jaune (21–50 %) et rouge (1–20 %), facilitant l’évaluation de l’état d’un mob d’un seul coup d’œil.',
+    'pt-PT' => 'A barra de vida muda de cor conforme a vida restante: verde (51–100%), amarelo (21–50%) e vermelho (1–20%), facilitando a avaliação do estado de um mob num relance.',
+    'pt-BR' => 'A barra de vida muda de cor conforme a vida restante: verde (51–100%), amarelo (21–50%) e vermelho (1–20%), facilitando ver a condição de um mob rapidamente.',
+    'id'    => 'Bar kesehatan berubah warna berdasarkan sisa darah: hijau (51–100%), kuning (21–50%), dan merah (1–20%), memudahkan mengecek kondisi mob secara sekilas.',
+    'ru'    => 'Полоса здоровья меняет цвет в зависимости от оставшегося HP: зелёный (51–100%), жёлтый (21–50%) и красный (1–20%), позволяя мгновенно определить состояние моба.',
+    'ko'    => '체력 바는 남은 체력에 따라 색이 바뀝니다: 초록색 (51–100%), 노란색 (21–50%), 빨간색 (1–20%)으로, 몹의 상태를 한눈에 파악할 수 있습니다.',
+    'zh-CN' => '血量条会根据剩余血量改变颜色：绿色（51–100%）、黄色（21–50%）和红色（1–20%），让你能一眼判断生物的状态。',
+    'ja'    => '残り体力に応じて体力バーの色が変化します（緑：51～100%、黄：21～50%、赤：1～20%）。一目でモブの状態がわかります。',
+    'tr'    => 'Can çubuğu, kalan cana göre renk değiştirir: yeşil (%%51–100), sarı (%%21–50) ve kırmızı (%%1–20). Bu, bir mobun durumunu bir bakışta anlamayı kolaylaştırır.',
+    'vi'    => 'Thanh máu thay đổi màu sắc theo lượng máu còn lại: xanh lá (51–100%), vàng (21–50%) và đỏ (1–20%), giúp dễ dàng đánh giá tình trạng của mob chỉ trong nháy mắt.'
+][$lang];
+
+$f3_title =[
+    'en'    => 'Glows in the Dark',
+    'en-US' => 'Glows in the Dark',
+    'en-GB' => 'Glows in the Dark',
+    'es-ES' => 'Brilla en la oscuridad',
+    'es-MX' => 'Brilla en la oscuridad',
+    'de-DE' => 'Leuchtet im Dunkeln',
+    'fr-FR' => 'Brille dans le noir',
+    'fr-CA' => 'Brille dans le noir',
+    'pt-PT' => 'Brilha no escuro',
+    'pt-BR' => 'Brilha no escuro',
+    'id'    => 'Bercahaya dalam gelap',
+    'ru'    => 'Светится в темноте',
+    'ko'    => '어두운 곳에서 빛남',
+    'zh-CN' => '在黑暗中发光',
+    'ja'    => '暗闇で光る',
+    'tr'    => 'Karanlıkta parlar',
+    'vi'    => 'Phát sáng trong bóng tối'
+][$lang];
+$f3_description = [
+    'en'    => 'Both the bar and numbers glow in the dark, ensuring clear visibility in any lighting condition.',
+    'en-US' => 'Both the bar and numbers glow in the dark, ensuring clear visibility in any lighting condition.',
+    'en-GB' => 'Both the bar and numbers glow in the dark, ensuring clear visibility in any lighting condition.',
+    'es-ES' => 'Tanto la barra como los números brillan en la oscuridad, garantizando una visibilidad clara en cualquier condición de iluminación.',
+    'es-MX' => 'La barra y los números brillan en la oscuridad, asegurando buena visibilidad sin importar la iluminación.',
+    'de-DE' => 'Sowohl die Leiste als auch die Zahlen leuchten im Dunkeln und sorgen für gute Sichtbarkeit bei allen Lichtverhältnissen.',
+    'fr-FR' => "La barre et les chiffres brillent dans l'obscurité, assurant une bonne visibilité quelles que soient les conditions d’éclairage.",
+    'fr-CA' => 'La barre et les chiffres brillent dans le noir, garantissant une visibilité claire en tout temps.',
+    'pt-PT' => 'Tanto a barra como os números brilham no escuro, garantindo boa visibilidade em qualquer condição de iluminação.',
+    'pt-BR' => 'A barra e os números brilham no escuro, garantindo visibilidade clara em qualquer ambiente.',
+    'id'    => 'Baik bilah maupun angka bersinar dalam gelap, memastikan visibilitas yang jelas dalam kondisi pencahayaan apa pun.',
+    'ru'    => 'Полоса и цифры светятся в темноте, обеспечивая хорошую видимость при любом освещении.',
+    'ko'    => '체력 바와 숫자 모두 어둠 속에서도 빛나며, 어떤 조명에서도 잘 보이도록 합니다.',
+    'zh-CN' => '血条和数字在黑暗中会发光，确保在任何光照条件下都能清晰可见。',
+    'ja'    => 'バーと数字は暗闇で光り、どんな明るさでもはっきり見えるようになっています。',
+    'tr'    => 'Hem çubuk hem de sayılar karanlıkta parlar, her ışık koşulunda net görünürlük sağlar.',
+    'vi'    => 'Cả thanh và số đều phát sáng trong bóng tối, đảm bảo khả năng nhìn rõ trong mọi điều kiện ánh sáng.'
+][$lang];
+
+
+$faq_feedback = [
+    'en'    => 'FAQ & Feedback',
+    'en-US' => 'FAQ & Feedback',
+    'en-GB' => 'FAQ & Feedback',
+    'es-ES' => 'Preguntas frecuentes y comentarios',
+    'es-MX' => 'Preguntas frecuentes y comentarios',
+    'de-DE' => 'FAQ & Feedback',
+    'fr-FR' => 'FAQ & Retour',
+    'fr-CA' => 'FAQ & Retour',
+    'pt-PT' => 'FAQ e Feedback',
+    'pt-BR' => 'FAQ e Feedback',
+    'id'    => 'FAQ & Masukan',
+    'ru'    => 'Вопросы и отзывы',
+    'ko'    => 'FAQ 및 피드백',
+    'zh-CN' => '常见问题与反馈',
+    'ja'    => 'よくある質問・フィードバック',
+    'tr'    => 'SSS ve Geri Bildirim',
+    'vi'    => 'Câu hỏi & Phản hồi',
+][$lang];
+
+$faq = [
+    'en'    => 'FAQ',
+    'en-US' => 'FAQ',
+    'en-GB' => 'FAQ',
+    'es-ES' => 'Preguntas frecuentes',
+    'es-MX' => 'Preguntas frecuentes',
+    'de-DE' => 'FAQ',
+    'fr-FR' => 'FAQ',
+    'fr-CA' => 'FAQ',
+    'pt-PT' => 'FAQ',
+    'pt-BR' => 'FAQ',
+    'id'    => 'FAQ',
+    'ru'    => 'Часто задаваемые вопросы',
+    'ko'    => '자주 묻는 질문',
+    'zh-CN' => '常见问题',
+    'ja'    => 'よくある質問',
+    'tr'    => 'SSS',
+    'vi'    => 'Câu hỏi thường gặp',
+][$lang];
+
+$feedback = [
+    'en'    => 'Feedback',
+    'en-US' => 'Feedback',
+    'en-GB' => 'Feedback',
+    'es-ES' => 'Comentarios',
+    'es-MX' => 'Comentarios',
+    'de-DE' => 'Feedback',
+    'fr-FR' => 'Retour',
+    'fr-CA' => 'Retour',
+    'pt-PT' => 'Feedback',
+    'pt-BR' => 'Feedback',
+    'id'    => 'Masukan',
+    'ru'    => 'Обратная связь',
+    'ko'    => '피드백',
+    'zh-CN' => '反馈',
+    'ja'    => 'フィードバック',
+    'tr'    => 'Geri Bildirim',
+    'vi'    => 'Phản hồi'
+][$lang];
+$feedback_message = [
+    'en'    => "Feel free to share your feedback, comments, or bug reports — your input helps make this resource pack even better!",
+    'en-US' => "Feel free to share your feedback, comments, or bug reports — your input helps make this resource pack even better!",
+    'en-GB' => "Feel free to share your feedback, comments, or bug reports — your input helps make this resource pack even better!",
+    'es-ES' => "No dudes en compartir tus comentarios, opiniones o informes de errores — tu aporte ayuda a mejorar este paquete de recursos.",
+    'es-MX' => "No dudes en compartir tus comentarios, opiniones o informes de errores — tu aporte ayuda a mejorar este paquete de recursos.",
+    'de-DE' => "Te invitamos a compartir tus comentarios, opiniones o reportes de errores — tu aporte ayuda a mejorar este paquete de recursos.",
+    'fr-FR' => "N'hésitez pas à partager vos retours, commentaires ou rapports de bugs — vos contributions aident à améliorer ce pack de ressources.",
+    'fr-CA' => "N'hésitez pas à partager vos retours, commentaires ou rapports de bogues — vos contributions aident à améliorer ce pack de ressources.",
+    'pt-PT' => "Sinta-se à vontade para partilhar o seu feedback, comentários ou relatórios de bugs — a sua contribuição ajuda a melhorar este pacote de recursos.",
+    'pt-BR' => "Sinta-se à vontade para compartilhar seu feedback, comentários ou relatos de bugs — sua contribuição ajuda a melhorar este pacote de recursos.",
+    'id'    => "Jangan ragu untuk membagikan masukan, komentar, atau laporan bug Anda — kontribusi Anda membantu memperbaiki paket sumber daya ini.",
+    'ru'    => "Не стесняйтесь делиться отзывами, комментариями или сообщениями об ошибках — ваш вклад помогает улучшить этот ресурс-пак.",
+    'ko'    => "피드백, 의견 또는 버그 리포트를 자유롭게 공유해 주세요 — 여러분의 의견이 이 리소스 팩을 더 나아지게 합니다!",
+    'zh-CN' => "欢迎随时分享您的反馈、评论或错误报告——您的建议有助于让这个资源包变得更好！",
+    'ja'    => "フィードバックやご意見、バグ報告をお気軽にお寄せください。皆さまのご意見がリソースパックの改善につながります！",
+    'tr'    => "Geri bildirimlerinizi, yorumlarınızı veya hata raporlarınızı paylaşmaktan çekinmeyin — katkılarınız bu kaynak paketini daha iyi hale getirir.",
+    'vi'    => "Hãy thoải mái chia sẻ phản hồi, nhận xét hoặc báo cáo lỗi — đóng góp của bạn giúp cải thiện gói tài nguyên này."
+][$lang];
+$placeholder = [
+    'en'    => 'Write your feedback here...',
+    'en-US' => 'Write your feedback here...',
+    'en-GB' => 'Write your feedback here...',
+    'es-ES' => 'Escribe tus comentarios aquí...',
+    'es-MX' => 'Escribe tus comentarios aquí...',
+    'de-DE' => 'Schreiben Sie hier Ihr Feedback...',
+    'fr-FR' => 'Écrivez vos commentaires ici...',
+    'fr-CA' => 'Écrivez vos commentaires ici...',
+    'pt-PT' => 'Escreva o seu feedback aqui...',
+    'pt-BR' => 'Escreva seu feedback aqui...',
+    'id'    => 'Tulis masukan Anda di sini...',
+    'ru'    => 'Напишите ваш отзыв здесь...',
+    'ko'    => '여기에 피드백을 작성하세요...',
+    'zh-CN' => '请在此输入反馈内容...',
+    'ja'    => 'ご意見・ご感想をご記入ください...',
+    'tr'    => 'Geri bildiriminizi buraya yazın...',
+    'vi'    => 'Viết phản hồi của bạn tại đây...',
+][$lang];
+$submit_button = [
+    'en'    => 'Send',
+    'en-US' => 'Send',
+    'en-GB' => 'Send',
+    'es-ES' => 'Enviar',
+    'es-MX' => 'Enviar',
+    'de-DE' => 'Senden',
+    'fr-FR' => 'Envoyer',
+    'fr-CA' => 'Envoyer',
+    'pt-PT' => 'Enviar',
+    'pt-BR' => 'Enviar',
+    'id'    => 'Kirim',
+    'ru'    => 'Отправить',
+    'ko'    => '보내기',
+    'zh-CN' => '发送',
+    'ja'    => '送信',
+    'tr'    => 'Gönder',
+    'vi'    => 'Gửi',
+][$lang];
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title><?= $title?> | Rvo Works</title>
     <meta name="description" content="<?= $description?>">
     <link rel="icon" href="/common/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/common/apple-touch-icon.png">
     
-    <link rel="canonical" href="https://rvo.jp/health-bar/">
+    <link rel="canonical" href="https://rvo.jp/health-bar/?lang=<?= $lang ?>">
     <link rel="alternate" hreflang="en"    href="https://rvo.jp/health-bar/?lang=en">
     <link rel="alternate" hreflang="en-US" href="https://rvo.jp/health-bar/?lang=en-US">
     <link rel="alternate" hreflang="en-GB" href="https://rvo.jp/health-bar/?lang=en-GB">
@@ -372,7 +566,7 @@ $f1_description = [
             <a href="./?lang=<?= $lang ?>#preview"><?= $preview ?></a>
             <a href="./?lang=<?= $lang ?>#changelog"><?= $news ?></a>
             <a href="./?lang=<?= $lang ?>#features">Features</a>
-            <a href="./?lang=<?= $lang ?>#faq">FAQ & Feedback</a>
+            <a href="./?lang=<?= $lang ?>#faq"><?= $faq_feedback ?></a>
         </div>
     </div>
 
@@ -417,8 +611,8 @@ $f1_description = [
         <hr>
         <div>
             <div>
-                <h1>Color-coded Levels</h1>
-                <p>The health bar changes color based on the remaining health: green (51-100%), yellow (21-50%), and red (1-20%)—making it easy to assess a mob’s condition at a glance.</p>
+                <h1><?= $f2_title ?></h1>
+                <p><?= $f2_description ?></p>
             </div>
             <div id="a2" class="pic"></div>
         </div>
@@ -426,15 +620,15 @@ $f1_description = [
         <div>
             <div id="a3" class="pic"></div>
             <div>
-                <h1>Always Visible</h1>
-                <p>Both the bar and numbers glow in the dark, ensuring clear visibility in any lighting condition.</p>
+                <h1><?= $f3_title ?></h1>
+                <p><?= $f3_description ?></p>
             </div>
         </div>
         <hr>
     </div>
 
     <div id="faq">
-        <h1>FAQ</h1>
+        <h1><?= $faq ?></h1>
         <div id="qlist">
             <div class="q">
                 <p>Does this support mobs from other addons?</p>
@@ -447,13 +641,13 @@ $f1_description = [
         </div>
 
         <div id="form">
-            <h1>Feedback</h1>
+            <h1><?= $feedback ?></h1>
             <div id="feedbackform">
-                <p>Feel free to share your feedback, comments, or bug reports — your input helps improve the mcpack!</p>
-                <textarea id="feedback" rows="5" placeholder="Enter here"></textarea>
-                <p>If you'd like a reply, please provide your email address below:</p>
-                <input type="email" id="email" placeholder="Your email address (optional)">
-                <p id="send">Send <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.3009 13.6949L20.102 3.89742M10.5795 14.1355L12.8019 18.5804C13.339 19.6545 13.6075 20.1916 13.9458 20.3356C14.2394 20.4606 14.575 20.4379 14.8492 20.2747C15.1651 20.0866 15.3591 19.5183 15.7472 18.3818L19.9463 6.08434C20.2845 5.09409 20.4535 4.59896 20.3378 4.27142C20.2371 3.98648 20.013 3.76234 19.7281 3.66167C19.4005 3.54595 18.9054 3.71502 17.9151 4.05315L5.61763 8.2523C4.48114 8.64037 3.91289 8.83441 3.72478 9.15032C3.56153 9.42447 3.53891 9.76007 3.66389 10.0536C3.80791 10.3919 4.34498 10.6605 5.41912 11.1975L9.86397 13.42C10.041 13.5085 10.1295 13.5527 10.2061 13.6118C10.2742 13.6643 10.3352 13.7253 10.3876 13.7933C10.4468 13.87 10.491 13.9585 10.5795 14.1355Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></p>
+                <p><?= $feedback_message ?></p>
+                <textarea id="feedback" rows="5" placeholder="<?= $placeholder ?>"></textarea>
+                <!-- <p>If you'd like a reply, please provide your email address below:</p>
+                <input type="email" id="email" placeholder="Your email address (optional)"> -->
+                <p id="send"><?= $submit_button ?> <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.3009 13.6949L20.102 3.89742M10.5795 14.1355L12.8019 18.5804C13.339 19.6545 13.6075 20.1916 13.9458 20.3356C14.2394 20.4606 14.575 20.4379 14.8492 20.2747C15.1651 20.0866 15.3591 19.5183 15.7472 18.3818L19.9463 6.08434C20.2845 5.09409 20.4535 4.59896 20.3378 4.27142C20.2371 3.98648 20.013 3.76234 19.7281 3.66167C19.4005 3.54595 18.9054 3.71502 17.9151 4.05315L5.61763 8.2523C4.48114 8.64037 3.91289 8.83441 3.72478 9.15032C3.56153 9.42447 3.53891 9.76007 3.66389 10.0536C3.80791 10.3919 4.34498 10.6605 5.41912 11.1975L9.86397 13.42C10.041 13.5085 10.1295 13.5527 10.2061 13.6118C10.2742 13.6643 10.3352 13.7253 10.3876 13.7933C10.4468 13.87 10.491 13.9585 10.5795 14.1355Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></p>
                 <p id="error"></p>
             </div>
 
@@ -469,6 +663,70 @@ $f1_description = [
         <p>Copyright (c) 2024-2025 Rvo JP.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script>
+
+let bgIndex = 1;
+const topElement = document.getElementById('top');
+function changebg() {
+    topElement.style.backgroundImage = `url(./img/bg/${bgIndex}.jpeg)`;
+    if (bgIndex == 7) bgIndex = 1
+    else bgIndex ++;
+}
+
+for (let i = 1; i <= 7; i++) {
+    new Image().src =  `url(./img/bg/${i}.jpeg)`;
+}
+
+setInterval(changebg, 5000)
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < lastScrollY) {
+        if (currentScrollY == 0) {
+            header.classList.remove('header-colored');
+        }
+        else header.classList.add('header-colored');
+
+        header.classList.remove('header-hidden');
+    } else {
+        header.classList.add('header-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+document.getElementById('send').addEventListener('click', () => {
+    const feedback = document.getElementById('feedback').value.trim();
+    const error = document.getElementById('error')
+
+    if (feedback) {
+        fetch('./feedback/feedback.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                feedback: feedback,
+                lang: "<?= $lang ?>"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('feedbackform').style.display = 'none';
+            document.getElementById('thankyou').style.display = 'block';
+        })
+        .catch(error => error.textContent = "There was an error sending your feedback.");
+    }
+    else {
+        error.textContent = "Please input your feedback."
+    }
+})
+
+document.querySelectorAll('.q').forEach(el => el.addEventListener('click', () => {
+    el.querySelector('.a').classList.toggle('hidden')
+}))
+    </script>
 </body>
 </html>
