@@ -16,26 +16,6 @@ $lang_list = [
 $lang = isset($_GET['lang']) ? $_GET['lang'] : explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE'])[0];
 if (!in_array($lang, $lang_list, true)) $lang = 'en';
 
-$currency_by_lang = [
-    'en'    => 'USD',  // 英語（汎用）
-    'en-US' => 'USD',  // アメリカ合衆国ドル
-    'en-GB' => 'GBP',  // イギリス ポンド
-    'es-ES' => 'EUR',  // スペイン ユーロ
-    'es-MX' => 'MXN',  // メキシコ ペソ
-    'de-DE' => 'EUR',  // ドイツ ユーロ
-    'fr-FR' => 'EUR',  // フランス ユーロ
-    'fr-CA' => 'CAD',  // カナダ ドル
-    'pt-PT' => 'EUR',  // ポルトガル ユーロ
-    'pt-BR' => 'BRL',  // ブラジル レアル
-    'id'    => 'IDR',  // インドネシア ルピア
-    'ru'    => 'RUB',  // ロシア ルーブル
-    'ko'    => 'KRW',  // 韓国 ウォン
-    'zh-CN' => 'CNY',  // 中国 人民元
-    'ja'    => 'JPY',  // 日本 円
-    'tr'    => 'TRY',  // トルコ リラ
-    'vi'    => 'VND',  // ベトナム ドン
-];
-
 $title = [
     'en'    => 'Health Bar - Minecraft Resource Pack',
     'en-US' => 'Health Bar - Minecraft Resource Pack',
@@ -130,7 +110,7 @@ $downloads_text = [
     'ru'    => '%s загрузок',
     'ko'    => '%s회 다운로드',
     'zh-CN' => '已下载 %s 次',
-    'ja'    => '%s ダウンロード数',
+    'ja'    => '%s ダウンロード',
     'tr'    => '%s indirme',
     'vi'    => '%s lượt tải xuống'
 ][$lang];
@@ -252,7 +232,124 @@ $news_body = [
     'tr'    => "Bu güncelleme, Minecraft v1.21.90'da yeni eklenen 'Mutlu Ghast' yaratığına destek ekler. Ayrıca Creeper'ların her zaman yıldırım çarpmış gibi görünmesine neden olan bir hatayı ve Ghast'ların anormal şekilde büyük görünmesine neden olan bir sorunu düzeltir.",
     'vi'    => "Bản cập nhật này bổ sung hỗ trợ cho mob mới 'Happy Ghast' từ Minecraft v1.21.90. Đồng thời, nó sửa lỗi khiến Creeper luôn xuất hiện dưới dạng bị sét đánh và khắc phục sự cố Ghast hiển thị với kích thước bất thường."
 ][$lang];
+$learn_more_github = [
+    'en'    => 'Learn more on GitHub',
+    'en-US' => 'Learn more on GitHub',
+    'en-GB' => 'Learn more on GitHub',
+    'es-ES' => 'Más información en GitHub',
+    'es-MX' => 'Más información en GitHub',
+    'de-DE' => 'Mehr erfahren auf GitHub',
+    'fr-FR' => 'En savoir plus sur GitHub',
+    'fr-CA' => 'En savoir plus sur GitHub',
+    'pt-PT' => 'Saiba mais no GitHub',
+    'pt-BR' => 'Saiba mais no GitHub',
+    'id'    => 'Pelajari lebih lanjut di GitHub',
+    'ru'    => 'Подробнее на GitHub',
+    'ko'    => 'GitHub에서 자세히 알아보기',
+    'zh-CN' => '在 GitHub 上了解更多',
+    'ja'    => 'GitHubで詳しく見る',
+    'tr'    => 'GitHub\'da daha fazla bilgi edinin',
+    'vi'    => 'Tìm hiểu thêm trên GitHub',
+][$lang];
 
+$support_project_title = [
+    'en'    => 'Support the Project',
+    'en-US' => 'Support the Project',
+    'en-GB' => 'Support the Project',
+    'es-ES' => 'Apoya el proyecto',
+    'es-MX' => 'Apoya el proyecto',
+    'de-DE' => 'Unterstütze das Projekt',
+    'fr-FR' => 'Soutenez le projet',
+    'fr-CA' => 'Soutenez le projet',
+    'pt-PT' => 'Apoie o projeto',
+    'pt-BR' => 'Apoie o projeto',
+    'id'    => 'Dukung Proyek',
+    'ru'    => 'Поддержите проект',
+    'ko'    => '프로젝트 지원하기',
+    'zh-CN' => '支持该项目',
+    'ja'    => 'プロジェクトを支援する',
+    'tr'    => 'Projeyi Destekleyin',
+    'vi'    => 'Hỗ trợ dự án',
+][$lang];
+$support_project_text = [
+    'en'    => 'If you like this resource pack, please consider supporting its development. Even the smallest donation means the world to me and keeps the project alive and improving!',
+    'en-US' => 'If you like this resource pack, please consider supporting its development. Even the smallest donation means the world to me and keeps the project alive and improving!',
+    'en-GB' => 'If you like this resource pack, please consider supporting its development. Even the smallest donation means the world to me and keeps the project alive and improving!',
+    'es-ES' => 'Si te gusta este paquete de recursos, por favor considera apoyar su desarrollo. ¡Incluso la donación más pequeña significa mucho para mí y mantiene el proyecto vivo y mejorando!',
+    'es-MX' => 'Si te gusta este paquete de recursos, por favor considera apoyar su desarrollo. ¡Incluso la donación más pequeña significa mucho para mí y mantiene el proyecto vivo y mejorando!',
+    'de-DE' => 'Wenn dir dieses Ressourcenpaket gefällt, bitte unterstütze seine Entwicklung. Schon die kleinste Spende bedeutet mir sehr viel und hält das Projekt lebendig und in Entwicklung!',
+    'fr-FR' => 'Si vous aimez ce pack de ressources, merci de soutenir son développement. Même le plus petit don représente énormément pour moi et permet au projet de continuer à vivre et à s’améliorer !',
+    'fr-CA' => 'Si vous aimez ce pack de ressources, merci de soutenir son développement. Même le plus petit don représente énormément pour moi et permet au projet de continuer à vivre et à s’améliorer !',
+    'pt-PT' => 'Se gostas deste pacote de recursos, por favor considera apoiar o seu desenvolvimento. Mesmo a menor doação significa imenso para mim e mantém o projeto vivo e em constante melhoria!',
+    'pt-BR' => 'Se você gosta deste pacote de recursos, por favor considere apoiar seu desenvolvimento. Mesmo a menor doação significa muito para mim e mantém o projeto vivo e em constante melhoria!',
+    'id'    => 'Jika kamu menyukai paket resource ini, mohon pertimbangkan untuk mendukung pengembangannya. Bahkan donasi terkecil pun sangat berarti bagi saya dan menjaga proyek ini tetap hidup serta berkembang!',
+    'ru'    => 'Если вам нравится этот ресурс-пак, пожалуйста, поддержите его разработку. Даже самая маленькая пожертвование очень важна для меня и помогает проекту жить и развиваться!',
+    'ko'    => '이 리소스 팩이 마음에 드신다면, 개발을 지원해 주세요. 아주 작은 기부라도 저에게는 큰 힘이 되며 프로젝트를 계속 유지하고 발전시키는 데 도움이 됩니다!',
+    'zh-CN' => '如果您喜欢此资源包，请考虑支持其开发。即使是最小的捐赠对我来说意义重大，能够让项目继续存活并不断改进！',
+    'ja'    => 'このリソースパックが気に入ったら、ぜひ開発を支援してください。たとえごくわずかな寄付でも私にとっては大きな励みになり、プロジェクトの継続と改善に繋がります！',
+    'tr'    => 'Bu kaynak paketini beğendiyseniz, lütfen geliştirilmesini desteklemeyi düşünün. En küçük bağış bile benim için çok değerli ve projenin yaşamaya ve gelişmeye devam etmesini sağlar!',
+    'vi'    => 'Nếu bạn thích gói tài nguyên này, xin hãy cân nhắc hỗ trợ phát triển. Ngay cả khoản quyên góp nhỏ nhất cũng có ý nghĩa rất lớn với tôi và giúp dự án tiếp tục tồn tại và cải thiện!',
+][$lang];
+$donate_button_text = [
+    'en'    => 'Donate $1',
+    'en-US' => 'Donate $1',
+    'en-GB' => 'Donate £1',
+    'es-ES' => 'Donar 1 €',
+    'es-MX' => 'Donar MX$20',
+    'de-DE' => 'Spende 1 €',
+    'fr-FR' => 'Faire un don de 1 €',
+    'fr-CA' => 'Faire un don de 1 $CA',
+    'pt-PT' => 'Doar 1 €',
+    'pt-BR' => 'Doar R$5',
+    'id'    => 'Donasi Rp10.000',
+    'ru'    => 'Пожертвовать 100 ₽',
+    'ko'    => '1,000원 기부하기',
+    'zh-CN' => '捐赠 ¥10',
+    'ja'    => '¥100 寄付',
+    'tr'    => '₺30 bağışla',
+    'vi'    => 'Ủng hộ 20.000₫',
+][$lang];
+$donate_url = [
+    'en'    => 'https://donate.stripe.com/6oUcN72w70lrd9H0FT73G05',  // USD 英語（汎用）
+    'en-US' => 'https://donate.stripe.com/6oUcN72w70lrd9H0FT73G05',  // USD アメリカ合衆国ドル
+    'en-GB' => 'https://donate.stripe.com/9B6fZj7Qrc49c5D0FT73G06',  // GBP イギリス ポンド
+    'es-ES' => 'https://donate.stripe.com/6oU14p4Ef6JP7Pnbkx73G07',  // EUR スペイン ユーロ
+    'es-MX' => 'https://donate.stripe.com/14AeVfb2Dech8TrdsF73G08',  // MXN メキシコ ペソ
+    'de-DE' => 'https://donate.stripe.com/8x26oJ3Ab5FL6Lj9cp73G09',  // EUR ドイツ ユーロ
+    'fr-FR' => 'https://donate.stripe.com/dRm6oJ9Yz2tzd9Hbkx73G0a',  // EUR フランス ユーロ
+    'fr-CA' => 'https://donate.stripe.com/7sY9AV0nZ2tz1qZcoB73G0b',  // CAD カナダ ドル
+    'pt-PT' => 'https://donate.stripe.com/bJeaEZ3Abgkp6Lj0FT73G0c',  // EUR ポルトガル ユーロ
+    'pt-BR' => 'https://donate.stripe.com/eVq9AV4Ef1pv9XvfAN73G0d',  // BRL ブラジル レアル
+    'id'    => 'https://donate.stripe.com/5kQ4gB1s36JP6Lj4W973G0e',  // IDR インドネシア ルピア
+    'ru'    => 'https://donate.stripe.com/4gM8wR8Uv1pvb1zfAN73G0f',  // RUB ロシア ルーブル
+    'ko'    => 'https://donate.stripe.com/7sY28t3Ab2tz0mVdsF73G0g',  // KRW 韓国 ウォン
+    'zh-CN' => 'https://donate.stripe.com/9B63cx2w79W10mV60d73G0h',  // CNY 中国 人民元
+    'ja'    => 'https://donate.stripe.com/aFabJ34Ef1pv2v3ewJ73G0i',  // JPY 日本 円
+    'tr'    => 'https://donate.stripe.com/eVq3cx4Ef8RX3z71JX73G0j',  // TRY トルコ リラ
+    'vi'    => 'https://donate.stripe.com/aFa28t3Abd8d1qZ2O173G0k',  // VND ベトナム ドン
+][$lang];
+
+
+
+$features = [
+    'en'    => 'Features',
+    'en-US' => 'Features',
+    'en-GB' => 'Features',
+    'es-ES' => 'Funciones',
+    'es-MX' => 'Funciones',
+    'de-DE' => 'Funktionen',
+    'fr-FR' => 'Fonctionnalités',
+    'fr-CA' => 'Fonctionnalités',
+    'pt-PT' => 'Funcionalidades',
+    'pt-BR' => 'Funcionalidades',
+    'id'    => 'Fitur',
+    'ru'    => 'Функции',
+    'ko'    => '기능',
+    'zh-CN' => '功能',
+    'ja'    => '機能',
+    'tr'    => 'Özellikler',
+    'vi'    => 'Tính năng',
+][$lang];
 
 $f1_title = [
     'en'    => 'Bar & Exact Value',
@@ -412,6 +509,83 @@ $faq = [
     'vi'    => 'Câu hỏi thường gặp',
 ][$lang];
 
+$faq_q1 = [
+    'en'    => 'Does this support mobs from other addons?',
+    'en-US' => 'Does this support mobs from other addons?',
+    'en-GB' => 'Does this support mobs from other addons?',
+    'es-ES' => '¿Es compatible con criaturas de otros addons?',
+    'es-MX' => '¿Es compatible con mobs de otros addons?',
+    'de-DE' => 'Unterstützt dieses Pack auch Mobs aus anderen Add-ons?',
+    'fr-FR' => 'Ce pack est-il compatible avec les créatures d’autres addons ?',
+    'fr-CA' => 'Est-ce que ce pack prend en charge les créatures d’autres addons ?',
+    'pt-PT' => 'Este pack é compatível com mobs de outros addons?',
+    'pt-BR' => 'Este pack é compatível com mobs de outros addons?',
+    'id'    => 'Apakah ini mendukung mob dari addon lain?',
+    'ru'    => 'Поддерживает ли этот пак мобов из других аддонов?',
+    'ko'    => '다른 애드온의 몹도 지원하나요?',
+    'zh-CN' => '这个资源包支持其他附加组件的生物吗？',
+    'ja'    => '他のアドオンのモブにも対応していますか？',
+    'tr'    => 'Bu kaynak paketi diğer eklentilerdeki yaratıkları destekliyor mu?',
+    'vi'    => 'Gói tài nguyên này có hỗ trợ mob từ các addon khác không?',
+][$lang];
+$faq_a1 = [
+    'en'    => 'Currently, it only supports vanilla mobs. There are no plans to support mobs from other addons in future updates.',
+    'en-US' => 'Currently, it only supports vanilla mobs. There are no plans to support mobs from other addons in future updates.',
+    'en-GB' => 'Currently, it only supports vanilla mobs. There are no plans to support mobs from other addons in future updates.',
+    'es-ES' => 'Actualmente, solo es compatible con las criaturas del juego base. No hay planes para admitir criaturas de otros addons en futuras actualizaciones.',
+    'es-MX' => 'Actualmente, solo es compatible con los mobs del juego base. No se planea admitir mobs de otros addons en el futuro.',
+    'de-DE' => 'Derzeit werden nur Standard-Mobs unterstützt. Es sind keine Pläne vorhanden, Mobs aus anderen Add-ons in zukünftigen Updates zu unterstützen.',
+    'fr-FR' => 'Actuellement, seuls les monstres de base sont pris en charge. Il n’est pas prévu de prendre en charge ceux provenant d’autres addons à l’avenir.',
+    'fr-CA' => 'En ce moment, seuls les monstres de base sont pris en charge. Il n’y a pas de plans pour supporter ceux des autres addons dans les mises à jour futures.',
+    'pt-PT' => 'Atualmente, apenas os mobs do jogo base são suportados. Não há planos para suportar mobs de outros addons em atualizações futuras.',
+    'pt-BR' => 'Atualmente, apenas os mobs padrão do jogo são suportados. Não há planos para adicionar suporte a mobs de outros addons no futuro.',
+    'id'    => 'Saat ini hanya mendukung mob vanilla. Tidak ada rencana untuk mendukung mob dari addon lain dalam pembaruan mendatang.',
+    'ru'    => 'В настоящее время поддерживаются только стандартные мобы. Поддержка мобов из других аддонов не планируется.',
+    'ko'    => '현재는 기본 몹만 지원합니다. 다른 애드온의 몹은 향후에도 지원할 계획이 없습니다.',
+    'zh-CN' => '目前仅支持原版生物。未来的更新中暂无支持其他附加组件生物的计划。',
+    'ja'    => '現在はバニラのモブのみ対応しています。他のアドオンのモブに対応する予定はありません。',
+    'tr'    => 'Şu anda sadece varsayılan Minecraft yaratıkları desteklenmektedir. Gelecekte diğer eklentilerdeki yaratıklar için destek planlanmamaktadır.',
+    'vi'    => 'Hiện tại chỉ hỗ trợ các mob gốc của Minecraft. Không có kế hoạch hỗ trợ mob từ các addon khác trong tương lai.',
+][$lang];
+$faq_q2 = [
+    'en'    => 'Can I use this with animation packs like "Actions & Stuff"?',
+    'en-US' => 'Can I use this with animation packs like "Actions & Stuff"?',
+    'en-GB' => 'Can I use this with animation packs like "Actions & Stuff"?',
+    'es-ES' => '¿Puedo usar esto con paquetes de animaciones como "Actions & Stuff"?',
+    'es-MX' => '¿Puedo usar esto con paquetes de animaciones como "Actions & Stuff"?',
+    'de-DE' => 'Kann ich dies mit Animationspaketen wie "Actions & Stuff" verwenden?',
+    'fr-FR' => 'Puis-je l’utiliser avec des packs d’animations comme "Actions & Stuff" ?',
+    'fr-CA' => 'Puis-je utiliser cela avec des packs d’animations comme "Actions & Stuff" ?',
+    'pt-PT' => 'Posso usá-lo com pacotes de animação como "Actions & Stuff"?',
+    'pt-BR' => 'Posso usar isso com pacotes de animação como "Actions & Stuff"?',
+    'id'    => 'Apakah ini bisa digunakan bersama dengan animation pack seperti "Actions & Stuff"?',
+    'ru'    => 'Можно ли использовать это с анимационными пакетами, например "Actions & Stuff"?',
+    'ko'    => '"Actions & Stuff" 같은 애니메이션 팩과 함께 사용할 수 있나요?',
+    'zh-CN' => '可以和像 “Actions & Stuff” 这样的动画包一起使用吗？',
+    'ja'    => '「Actions & Stuff」のようなアニメーションパックと一緒に使えますか？',
+    'tr'    => '"Actions & Stuff" gibi animasyon paketleriyle birlikte kullanılabilir mi?',
+    'vi'    => 'Tôi có thể sử dụng nó với các gói hoạt ảnh như "Actions & Stuff" không?',
+][$lang];
+$faq_a2 = [
+    'en'    => 'No, it is not compatible. I also do not plan to add compatibility with specific addons in the future.',
+    'en-US' => 'No, it is not compatible. I also do not plan to add compatibility with specific addons in the future.',
+    'en-GB' => 'No, it is not compatible. I also do not plan to add compatibility with specific addons in the future.',
+    'es-ES' => 'No, no es compatible. Tampoco planeo agregar compatibilidad con addons específicos en el futuro.',
+    'es-MX' => 'No, no es compatible. Tampoco planeo agregar compatibilidad con addons específicos en el futuro.',
+    'de-DE' => 'Nein, es ist nicht kompatibel. Ich plane auch nicht, in Zukunft die Kompatibilität mit bestimmten Add-ons hinzuzufügen.',
+    'fr-FR' => 'Non, ce n’est pas compatible. Je ne prévois pas non plus d’ajouter une compatibilité avec des addons spécifiques à l’avenir.',
+    'fr-CA' => 'Non, ce n’est pas compatible. Je ne prévois pas non plus de rendre cela compatible avec des addons spécifiques à l’avenir.',
+    'pt-PT' => 'Não, não é compatível. Também não pretendo adicionar compatibilidade com addons específicos no futuro.',
+    'pt-BR' => 'Não, não é compatível. Também não pretendo adicionar compatibilidade com addons específicos no futuro.',
+    'id'    => 'Tidak, ini tidak kompatibel. Saya juga tidak berencana menambahkan kompatibilitas dengan addon tertentu di masa depan.',
+    'ru'    => 'Нет, это несовместимо. Я также не планирую добавлять поддержку конкретных аддонов в будущем.',
+    'ko'    => '아니요, 호환되지 않습니다. 특정 애드온과의 호환성을 추가할 계획도 없습니다.',
+    'zh-CN' => '不，这不兼容。我也没有计划在将来为特定的附加包添加兼容性。',
+    'ja'    => 'いいえ、対応していません。特定のアドオンとの互換性を今後追加する予定もありません。',
+    'tr'    => 'Hayır, uyumlu değildir. Gelecekte belirli eklentilerle uyumluluk eklemeyi de planlamıyorum.',
+    'vi'    => 'Không, nó không tương thích. Tôi cũng không có kế hoạch thêm hỗ trợ cho các addon cụ thể trong tương lai.',
+][$lang];
+
 $feedback = [
     'en'    => 'Feedback',
     'en-US' => 'Feedback',
@@ -487,6 +661,26 @@ $submit_button = [
     'ja'    => '送信',
     'tr'    => 'Gönder',
     'vi'    => 'Gửi',
+][$lang];
+
+$thank_you = [
+    'en'    => 'Thank you for your feedback! I truly appreciate your input and will use it to make improvements.',
+    'en-US' => 'Thank you for your feedback! I truly appreciate your input and will use it to make improvements.',
+    'en-GB' => 'Thank you for your feedback! I truly appreciate your input and will use it to make improvements.',
+    'es-ES' => '¡Gracias por tus comentarios! Aprecio sinceramente tu opinión y la utilizaré para hacer mejoras.',
+    'es-MX' => '¡Gracias por tus comentarios! Aprecio sinceramente tu opinión y la usaré para mejorar.',
+    'de-DE' => 'Vielen Dank für Ihr Feedback! Ich schätze Ihre Rückmeldung sehr und werde sie zur Verbesserung nutzen.',
+    'fr-FR' => 'Merci pour votre retour ! J’apprécie vraiment votre contribution et je m’en servirai pour améliorer le pack.',
+    'fr-CA' => 'Merci pour vos commentaires ! Je les apprécie beaucoup et je les utiliserai pour apporter des améliorations.',
+    'pt-PT' => 'Obrigado pelo seu feedback! Agradeço muito a sua opinião e vou usá-la para melhorar.',
+    'pt-BR' => 'Obrigado pelo seu feedback! Agradeço muito sua opinião e vou usá-la para melhorar.',
+    'id'    => 'Terima kasih atas masukan Anda! Saya sangat menghargainya dan akan menggunakannya untuk melakukan perbaikan.',
+    'ru'    => 'Спасибо за ваш отзыв! Я очень ценю ваше мнение и использую его для улучшения.',
+    'ko'    => '피드백을 보내주셔서 감사합니다! 여러분의 소중한 의견은 개선에 적극 반영하겠습니다.',
+    'zh-CN' => '感谢您的反馈！我非常重视您的意见，并会用来改进本资源包。',
+    'ja'    => 'フィードバックありがとうございます！皆さんのご意見を大切にし、改善に活かします。',
+    'tr'    => 'Geri bildiriminiz için teşekkür ederim! Görüşlerinizi gerçekten takdir ediyorum ve iyileştirmeler için kullanacağım.',
+    'vi'    => 'Cảm ơn bạn đã phản hồi! Tôi rất trân trọng ý kiến của bạn và sẽ sử dụng để cải thiện gói tài nguyên này.',
 ][$lang];
 
 ?>
@@ -565,7 +759,7 @@ $submit_button = [
         <div id="mn">
             <a href="./?lang=<?= $lang ?>#preview"><?= $preview ?></a>
             <a href="./?lang=<?= $lang ?>#changelog"><?= $news ?></a>
-            <a href="./?lang=<?= $lang ?>#features">Features</a>
+            <a href="./?lang=<?= $lang ?>#features"><?= $features ?></a>
             <a href="./?lang=<?= $lang ?>#faq"><?= $faq_feedback ?></a>
         </div>
     </div>
@@ -586,15 +780,15 @@ $submit_button = [
                 <p class="type"><?= $news_type_update_bugfix ?></p>
                 <h2><?= $news_title ?></h2>
                 <p><?= $news_body ?></p>
-                <a href="http://github.com/rvo-jp/health-bar/">Learn more on GitHub<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11254)"> <path d="M10 17L15 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 12L10 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11254"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></a>
+                <a href="http://github.com/rvo-jp/health-bar/"><?= $learn_more_github ?><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11254)"> <path d="M10 17L15 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 12L10 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11254"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></a>
             </div>
         </div>
 
         <div id="donation">
             <div class="des">
-                <h2><svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M4 21h9.62a3.995 3.995 0 0 0 3.037-1.397l5.102-5.952a1 1 0 0 0-.442-1.6l-1.968-.656a3.043 3.043 0 0 0-2.823.503l-3.185 2.547-.617-1.235A3.98 3.98 0 0 0 9.146 11H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h5.146c.763 0 1.448.423 1.789 1.105l.447.895H7v2h6.014a.996.996 0 0 0 .442-.11l.003-.001.004-.002h.003l.002-.001h.004l.001-.001c.009.003.003-.001.003-.001.01 0 .002-.001.002-.001h.001l.002-.001.003-.001.002-.001.002-.001.003-.001.002-.001c.003 0 .001-.001.002-.001l.003-.002.002-.001.002-.001.003-.001.002-.001h.001l.002-.001h.001l.002-.001.002-.001c.009-.001.003-.001.003-.001l.002-.001a.915.915 0 0 0 .11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823a2.029 2.029 0 0 1-1.52.688H4v-6zM16 2h-.017c-.163.002-1.006.039-1.983.705-.951-.648-1.774-.7-1.968-.704L12.002 2h-.004c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586a1.006 1.006 0 0 0 1.45-.001l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121A2.978 2.978 0 0 0 16.002 2H16zm1 3c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708A.977.977 0 0 1 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222l.707.707.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484a.987.987 0 0 1 .701.292c.189.189.293.44.293.707z"></path></g></svg> Support the Project</h2>
-                <p>If you like this resource pack, consider supporting its development! Even a small donation helps keep it updated and polished.</p>
-                <a href="https://buy.stripe.com/your-link">Donate 1 doller<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11254)"> <path d="M10 17L15 12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 12L10 7" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_429_11254"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></a>
+                <h2><svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M4 21h9.62a3.995 3.995 0 0 0 3.037-1.397l5.102-5.952a1 1 0 0 0-.442-1.6l-1.968-.656a3.043 3.043 0 0 0-2.823.503l-3.185 2.547-.617-1.235A3.98 3.98 0 0 0 9.146 11H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h5.146c.763 0 1.448.423 1.789 1.105l.447.895H7v2h6.014a.996.996 0 0 0 .442-.11l.003-.001.004-.002h.003l.002-.001h.004l.001-.001c.009.003.003-.001.003-.001.01 0 .002-.001.002-.001h.001l.002-.001.003-.001.002-.001.002-.001.003-.001.002-.001c.003 0 .001-.001.002-.001l.003-.002.002-.001.002-.001.003-.001.002-.001h.001l.002-.001h.001l.002-.001.002-.001c.009-.001.003-.001.003-.001l.002-.001a.915.915 0 0 0 .11-.078l4.146-3.317c.262-.208.623-.273.94-.167l.557.186-4.133 4.823a2.029 2.029 0 0 1-1.52.688H4v-6zM16 2h-.017c-.163.002-1.006.039-1.983.705-.951-.648-1.774-.7-1.968-.704L12.002 2h-.004c-.801 0-1.555.313-2.119.878C9.313 3.445 9 4.198 9 5s.313 1.555.861 2.104l3.414 3.586a1.006 1.006 0 0 0 1.45-.001l3.396-3.568C18.688 6.555 19 5.802 19 5s-.313-1.555-.878-2.121A2.978 2.978 0 0 0 16.002 2H16zm1 3c0 .267-.104.518-.311.725L14 8.55l-2.707-2.843C11.104 5.518 11 5.267 11 5s.104-.518.294-.708A.977.977 0 0 1 11.979 4c.025.001.502.032 1.067.485.081.065.163.139.247.222l.707.707.707-.707c.084-.083.166-.157.247-.222.529-.425.976-.478 1.052-.484a.987.987 0 0 1 .701.292c.189.189.293.44.293.707z"></path></g></svg> <?= $support_project_title ?></h2>
+                <p><?= $support_project_text ?></p>
+                <a href="<?= $donate_url ?>"><p id="donate"><?= $donate_button_text ?></p></a>
             </div>
         </div>
 
@@ -631,19 +825,19 @@ $submit_button = [
         <h1><?= $faq ?></h1>
         <div id="qlist">
             <div class="q">
-                <p>Does this support mobs from other addons?</p>
-                <p class="a hidden">Currently, it only supports vanilla mobs. There are no plans to support mobs from other addons in future updates.</p>
+                <p><?= $faq_q1 ?></p>
+                <p class="a hidden"><?= $faq_a1 ?></p>
             </div>
             <div class="q">
-                <p>Can I use this with animation packs like "Actions & Stuff"?</p>
-                <p class="a hidden">No, it is not compatible. I also do not plan to add compatibility with specific addons in the future.</p>
+                <p><?= $faq_q2 ?></p>
+                <p class="a hidden"><?= $faq_a2 ?></p>
             </div>
         </div>
 
         <div id="form">
             <h1><?= $feedback ?></h1>
             <div id="feedbackform">
-                <p><?= $feedback_message ?></p>
+                <p id="frommsg"><?= $feedback_message ?></p>
                 <textarea id="feedback" rows="5" placeholder="<?= $placeholder ?>"></textarea>
                 <!-- <p>If you'd like a reply, please provide your email address below:</p>
                 <input type="email" id="email" placeholder="Your email address (optional)"> -->
@@ -652,8 +846,7 @@ $submit_button = [
             </div>
 
             <div id="thankyou">
-                <h2>Thank you for your feedback!</h2>
-                <p>I truly appreciate your input and will use it to make improvements.</p>
+                <p><?= $thank_you ?></p>
             </div>
         </div>
 

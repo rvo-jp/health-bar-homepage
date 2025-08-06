@@ -219,7 +219,18 @@ svg {
     max-width: 1200px;
     background-color: #000;
 }
-
+#donate {
+    padding: 12px 30px;
+    display: inline-block;
+    font-weight: normal;
+    color: #5a96e4;
+    border-radius: 3px;
+    border: solid #5a96e4 1px;
+    transition: transform 0.2s ease;
+}
+#donate:hover {
+    transform: scale(1.05);
+}
 
 
 
@@ -277,6 +288,7 @@ p.a.hidden {
     background-color: #494949;
     padding: 7px 20px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #form {
@@ -285,11 +297,10 @@ p.a.hidden {
     max-width: 1200px;
     text-align: center;
 }
-#form p {
+#frommsg {
     color: lightgray;
 }
 #send {
-    color: white;
     font-weight: normal;
     margin: 10px auto;
     background-color: #5a96e4;
